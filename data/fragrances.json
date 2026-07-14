@@ -1,0 +1,3347 @@
+[
+  {
+    "id": 1,
+    "brand": "CREED",
+    "name": "Aventus",
+    "scentFamily": "Fresh",
+    "topNotes": [
+      "Pineapple",
+      "Bergamot",
+      "Blackcurrant",
+      "Apple"
+    ],
+    "middleNotes": [
+      "Birch",
+      "Patchouli",
+      "Moroccan Jasmine",
+      "Rose"
+    ],
+    "baseNotes": [
+      "Musk",
+      "Oakmoss",
+      "Ambergris",
+      "Vanilla"
+    ],
+    "intensity": 4,
+    "longevity": 4,
+    "sweetness": 3,
+    "warmth": 3,
+    "season": "Spring",
+    "timeOfDay": "All",
+    "gender": "Masculine",
+    "vibe": "Sophisticated",
+    "complexity": "Evolving",
+    "tier": "Niche",
+    "description": "The exceptional Aventus was inspired by the dramatic life of a historic emperor, celebrating strength, power and success.",
+    "image": "assets/images/fresh.png"
+  },
+  {
+    "id": 2,
+    "brand": "DIOR",
+    "name": "Sauvage Eau de Toilette",
+    "scentFamily": "Fresh",
+    "topNotes": [
+      "Calabrian Bergamot",
+      "Pepper"
+    ],
+    "middleNotes": [
+      "Sichuan Pepper",
+      "Lavender",
+      "Vetiver",
+      "Patchouli"
+    ],
+    "baseNotes": [
+      "Ambroxan",
+      "Cedar",
+      "Labdanum"
+    ],
+    "intensity": 4,
+    "longevity": 4,
+    "sweetness": 1,
+    "warmth": 3,
+    "season": "Summer",
+    "timeOfDay": "All",
+    "gender": "Masculine",
+    "vibe": "Adventurous",
+    "complexity": "Linear",
+    "tier": "Designer",
+    "description": "A radically fresh composition, dictated by a name that has the ring of a manifesto. Raw and noble all at once.",
+    "image": "assets/images/fresh.png"
+  },
+  {
+    "id": 3,
+    "brand": "GIORGIO ARMANI",
+    "name": "Acqua Di Gio",
+    "scentFamily": "Fresh",
+    "topNotes": [
+      "Lime",
+      "Lemon",
+      "Bergamot",
+      "Jasmine",
+      "Orange"
+    ],
+    "middleNotes": [
+      "Sea Notes",
+      "Peach",
+      "Freesia",
+      "Calone",
+      "Rose"
+    ],
+    "baseNotes": [
+      "White Musk",
+      "Cedar",
+      "Oakmoss",
+      "Patchouli",
+      "Amber"
+    ],
+    "intensity": 2,
+    "longevity": 3,
+    "sweetness": 2,
+    "warmth": 2,
+    "season": "Summer",
+    "timeOfDay": "Day",
+    "gender": "Masculine",
+    "vibe": "Clean",
+    "complexity": "Linear",
+    "tier": "Designer",
+    "description": "Born from the sea, the sun, the earth, and the breeze of a Mediterranean island. A fresh aquatic signature.",
+    "image": "assets/images/fresh.png"
+  },
+  {
+    "id": 4,
+    "brand": "CHANEL",
+    "name": "Bleu de Chanel",
+    "scentFamily": "Fresh",
+    "topNotes": [
+      "Grapefruit",
+      "Lemon",
+      "Mint",
+      "Pink Pepper"
+    ],
+    "middleNotes": [
+      "Ginger",
+      "Nutmeg",
+      "Jasmine",
+      "Iso E Super"
+    ],
+    "baseNotes": [
+      "Incense",
+      "Vetiver",
+      "Cedar",
+      "Sandalwood",
+      "Patchouli"
+    ],
+    "intensity": 3,
+    "longevity": 4,
+    "sweetness": 2,
+    "warmth": 3,
+    "season": "Spring",
+    "timeOfDay": "All",
+    "gender": "Masculine",
+    "vibe": "Sophisticated",
+    "complexity": "Evolving",
+    "tier": "Designer",
+    "description": "An ode to masculine freedom expressed in a woody aromatic fragrance with a captivating trail.",
+    "image": "assets/images/fresh.png"
+  },
+  {
+    "id": 5,
+    "brand": "JO MALONE",
+    "name": "Wood Sage & Sea Salt",
+    "scentFamily": "Fresh",
+    "topNotes": [
+      "Ambrette Seeds",
+      "Grapefruit"
+    ],
+    "middleNotes": [
+      "Sea Salt",
+      "Seaweed"
+    ],
+    "baseNotes": [
+      "Sage",
+      "Red Algae"
+    ],
+    "intensity": 2,
+    "longevity": 2,
+    "sweetness": 1,
+    "warmth": 2,
+    "season": "Summer",
+    "timeOfDay": "Day",
+    "gender": "Unisex",
+    "vibe": "Clean",
+    "complexity": "Linear",
+    "tier": "Niche",
+    "description": "Escape the everyday along the windswept shore. Waves breaking white, the air fresh with sea salt and spray.",
+    "image": "assets/images/fresh.png"
+  },
+  {
+    "id": 6,
+    "brand": "TOM FORD",
+    "name": "Neroli Portofino",
+    "scentFamily": "Fresh",
+    "topNotes": [
+      "Bergamot",
+      "Mandarin Orange",
+      "Lemon",
+      "Lavender",
+      "Myrtle"
+    ],
+    "middleNotes": [
+      "African Orange Flower",
+      "Jasmine",
+      "Neroli",
+      "Pittosporum"
+    ],
+    "baseNotes": [
+      "Amber",
+      "Angelica",
+      "Ambrette Seeds"
+    ],
+    "intensity": 2,
+    "longevity": 2,
+    "sweetness": 2,
+    "warmth": 2,
+    "season": "Summer",
+    "timeOfDay": "Day",
+    "gender": "Unisex",
+    "vibe": "Clean",
+    "complexity": "Linear",
+    "tier": "Niche",
+    "description": "Tom Ford captures the cool breezes, sparkling clear water, and lush foliage of the Italian Riviera.",
+    "image": "assets/images/fresh.png"
+  },
+  {
+    "id": 7,
+    "brand": "CREED",
+    "name": "Silver Mountain Water",
+    "scentFamily": "Fresh",
+    "topNotes": [
+      "Bergamot",
+      "Mandarin Orange"
+    ],
+    "middleNotes": [
+      "Green Tea",
+      "Blackcurrant"
+    ],
+    "baseNotes": [
+      "Musk",
+      "Sandalwood",
+      "Galbanum",
+      "Petitgrain"
+    ],
+    "intensity": 3,
+    "longevity": 3,
+    "sweetness": 2,
+    "warmth": 2,
+    "season": "Spring",
+    "timeOfDay": "Day",
+    "gender": "Unisex",
+    "vibe": "Clean",
+    "complexity": "Evolving",
+    "tier": "Niche",
+    "description": "Captures the purity and freshness of the Swiss Alps with notes of green tea and blackcurrant.",
+    "image": "assets/images/fresh.png"
+  },
+  {
+    "id": 8,
+    "brand": "DOLCE & GABBANA",
+    "name": "Light Blue Pour Homme",
+    "scentFamily": "Fresh",
+    "topNotes": [
+      "Grapefruit",
+      "Bergamot",
+      "Sicilian Mandarin",
+      "Juniper"
+    ],
+    "middleNotes": [
+      "Rosemary",
+      "Sichuan Pepper",
+      "Rosewood"
+    ],
+    "baseNotes": [
+      "Musk",
+      "Incense",
+      "Oakmoss"
+    ],
+    "intensity": 2,
+    "longevity": 3,
+    "sweetness": 1,
+    "warmth": 2,
+    "season": "Summer",
+    "timeOfDay": "Day",
+    "gender": "Masculine",
+    "vibe": "Clean",
+    "complexity": "Linear",
+    "tier": "Designer",
+    "description": "The essence of Mediterranean joy of life, capturing the sun-drenched summer days and ocean breeze.",
+    "image": "assets/images/fresh.png"
+  },
+  {
+    "id": 9,
+    "brand": "LE LABO",
+    "name": "Bergamote 22",
+    "scentFamily": "Fresh",
+    "topNotes": [
+      "Bergamot",
+      "Grapefruit",
+      "Petitgrain"
+    ],
+    "middleNotes": [
+      "Orange Blossom",
+      "Nutmeg",
+      "Vetiver"
+    ],
+    "baseNotes": [
+      "Amber",
+      "Musk",
+      "Cedar"
+    ],
+    "intensity": 3,
+    "longevity": 3,
+    "sweetness": 2,
+    "warmth": 2,
+    "season": "Summer",
+    "timeOfDay": "Day",
+    "gender": "Unisex",
+    "vibe": "Clean",
+    "complexity": "Evolving",
+    "tier": "Niche",
+    "description": "A dazzling bergamot that combines freshness, sweetness, and complexity with a touch of woodiness.",
+    "image": "assets/images/fresh.png"
+  },
+  {
+    "id": 10,
+    "brand": "DAVIDOFF",
+    "name": "Cool Water",
+    "scentFamily": "Fresh",
+    "topNotes": [
+      "Sea Water",
+      "Mint",
+      "Green Notes",
+      "Lavender",
+      "Coriander"
+    ],
+    "middleNotes": [
+      "Sandalwood",
+      "Jasmine",
+      "Neroli",
+      "Geranium"
+    ],
+    "baseNotes": [
+      "Musk",
+      "Oakmoss",
+      "Cedar",
+      "Tobacco",
+      "Amber"
+    ],
+    "intensity": 3,
+    "longevity": 3,
+    "sweetness": 1,
+    "warmth": 2,
+    "season": "Summer",
+    "timeOfDay": "Day",
+    "gender": "Masculine",
+    "vibe": "Clean",
+    "complexity": "Linear",
+    "tier": "Designer",
+    "description": "The legendary marine fragrance, bringing an intense wave of fresh, revitalizing aquatic energy.",
+    "image": "assets/images/fresh.png"
+  },
+  {
+    "id": 11,
+    "brand": "GIORGIO ARMANI",
+    "name": "Acqua Di Gio Profondo",
+    "scentFamily": "Fresh",
+    "topNotes": [
+      "Marine Notes",
+      "Green Mandarin",
+      "Aquozone"
+    ],
+    "middleNotes": [
+      "Rosemary",
+      "Lavender",
+      "Cypress",
+      "Mastic"
+    ],
+    "baseNotes": [
+      "Mineral notes",
+      "Musk",
+      "Patchouli",
+      "Amber"
+    ],
+    "intensity": 3,
+    "longevity": 4,
+    "sweetness": 1,
+    "warmth": 2,
+    "season": "Summer",
+    "timeOfDay": "All",
+    "gender": "Masculine",
+    "vibe": "Adventurous",
+    "complexity": "Linear",
+    "tier": "Designer",
+    "description": "A deep dive into the ocean's blue, mixing aromatic elements and mineral salts.",
+    "image": "assets/images/fresh.png"
+  },
+  {
+    "id": 12,
+    "brand": "CHANEL",
+    "name": "Allure Homme Sport",
+    "scentFamily": "Fresh",
+    "topNotes": [
+      "Orange",
+      "Mandarin Orange",
+      "Sea Notes",
+      "Aldehydes"
+    ],
+    "middleNotes": [
+      "Pepper",
+      "Neroli",
+      "Cedar"
+    ],
+    "baseNotes": [
+      "Tonka Bean",
+      "Vanilla",
+      "White Musk",
+      "Amber",
+      "Vetiver"
+    ],
+    "intensity": 3,
+    "longevity": 4,
+    "sweetness": 3,
+    "warmth": 3,
+    "season": "Spring",
+    "timeOfDay": "Day",
+    "gender": "Masculine",
+    "vibe": "Clean",
+    "complexity": "Evolving",
+    "tier": "Designer",
+    "description": "A fresh and sparkling fragrance with an active, sporty, and clean energy.",
+    "image": "assets/images/fresh.png"
+  },
+  {
+    "id": 13,
+    "brand": "VERSACE",
+    "name": "Pour Homme",
+    "scentFamily": "Fresh",
+    "topNotes": [
+      "Lemon",
+      "Neroli",
+      "Bergamot",
+      "Rose de Mai"
+    ],
+    "middleNotes": [
+      "Hyacinth",
+      "Clary Sage",
+      "Cedar",
+      "Geranium"
+    ],
+    "baseNotes": [
+      "Tonka Bean",
+      "Musk",
+      "Amber"
+    ],
+    "intensity": 3,
+    "longevity": 3,
+    "sweetness": 2,
+    "warmth": 2,
+    "season": "Summer",
+    "timeOfDay": "Day",
+    "gender": "Masculine",
+    "vibe": "Clean",
+    "complexity": "Linear",
+    "tier": "Designer",
+    "description": "A classic Mediterranean composition capturing zesty citruses and light floral undercurrents.",
+    "image": "assets/images/fresh.png"
+  },
+  {
+    "id": 14,
+    "brand": "PRADA",
+    "name": "L'Homme",
+    "scentFamily": "Fresh",
+    "topNotes": [
+      "Neroli",
+      "Black Pepper",
+      "Cardamom",
+      "Carrot Seeds"
+    ],
+    "middleNotes": [
+      "Iris",
+      "Violet",
+      "Geranium",
+      "Mate"
+    ],
+    "baseNotes": [
+      "Amber",
+      "Cedar",
+      "Patchouli",
+      "Sandalwood"
+    ],
+    "intensity": 3,
+    "longevity": 4,
+    "sweetness": 2,
+    "warmth": 2,
+    "season": "Spring",
+    "timeOfDay": "Day",
+    "gender": "Masculine",
+    "vibe": "Sophisticated",
+    "complexity": "Linear",
+    "tier": "Designer",
+    "description": "A superb clean soapy scent utilizing Iris and Neroli to create a crisp office signature.",
+    "image": "assets/images/fresh.png"
+  },
+  {
+    "id": 15,
+    "brand": "MAISON MARGIELA",
+    "name": "Replica Lazy Sunday Morning",
+    "scentFamily": "Fresh",
+    "topNotes": [
+      "Aldehydes",
+      "Lily-of-the-Valley",
+      "Pear"
+    ],
+    "middleNotes": [
+      "Rose",
+      "Iris",
+      "Orange Blossom"
+    ],
+    "baseNotes": [
+      "White Musk",
+      "Ambrette Seeds",
+      "Patchouli"
+    ],
+    "intensity": 2,
+    "longevity": 3,
+    "sweetness": 2,
+    "warmth": 2,
+    "season": "Spring",
+    "timeOfDay": "Day",
+    "gender": "Unisex",
+    "vibe": "Clean",
+    "complexity": "Linear",
+    "tier": "Niche",
+    "description": "Recreates the comforting feeling of fresh clean linen, warm sunbeams, and rumpled cotton sheets.",
+    "image": "assets/images/fresh.png"
+  },
+  {
+    "id": 16,
+    "brand": "BYREDO",
+    "name": "Bal d'Afrique",
+    "scentFamily": "Fresh",
+    "topNotes": [
+      "Lemon",
+      "Marigold",
+      "Blackcurrant",
+      "Bergamot",
+      "African Orange Flower"
+    ],
+    "middleNotes": [
+      "Violet",
+      "Cyclamen",
+      "Jasmine"
+    ],
+    "baseNotes": [
+      "Vetiver",
+      "Amber",
+      "Musk",
+      "Moroccan Cedar"
+    ],
+    "intensity": 3,
+    "longevity": 3,
+    "sweetness": 3,
+    "warmth": 3,
+    "season": "Spring",
+    "timeOfDay": "Day",
+    "gender": "Unisex",
+    "vibe": "Romantic",
+    "complexity": "Evolving",
+    "tier": "Niche",
+    "description": "A warm, floral-fresh fragrance inspired by Paris in the late 1920s and its infatuation with African culture.",
+    "image": "assets/images/fresh.png"
+  },
+  {
+    "id": 17,
+    "brand": "YVES SAINT LAURENT",
+    "name": "Y Eau de Parfum",
+    "scentFamily": "Fresh",
+    "topNotes": [
+      "Apple",
+      "Ginger",
+      "Bergamot"
+    ],
+    "middleNotes": [
+      "Sage",
+      "Juniper Berries",
+      "Geranium"
+    ],
+    "baseNotes": [
+      "Amberwood",
+      "Tonka Bean",
+      "Cedar",
+      "Vetiver",
+      "Olibanum"
+    ],
+    "intensity": 4,
+    "longevity": 5,
+    "sweetness": 3,
+    "warmth": 3,
+    "season": "Spring",
+    "timeOfDay": "All",
+    "gender": "Masculine",
+    "vibe": "Adventurous",
+    "complexity": "Linear",
+    "tier": "Designer",
+    "description": "A deep, fresh, and masculine fragrance with notes of sage, apple, and warm woods.",
+    "image": "assets/images/fresh.png"
+  },
+  {
+    "id": 18,
+    "brand": "JO MALONE",
+    "name": "Lime Basil & Mandarin",
+    "scentFamily": "Fresh",
+    "topNotes": [
+      "Lime",
+      "Mandarin Orange",
+      "Bergamot"
+    ],
+    "middleNotes": [
+      "Basil",
+      "Thyme",
+      "Lilac",
+      "Iris"
+    ],
+    "baseNotes": [
+      "Patchouli",
+      "Vetiver"
+    ],
+    "intensity": 2,
+    "longevity": 2,
+    "sweetness": 1,
+    "warmth": 2,
+    "season": "Summer",
+    "timeOfDay": "Day",
+    "gender": "Unisex",
+    "vibe": "Clean",
+    "complexity": "Linear",
+    "tier": "Niche",
+    "description": "Our signature fragrance. Peppery basil and aromatic white thyme bring an unexpected twist to mandarins.",
+    "image": "assets/images/fresh.png"
+  },
+  {
+    "id": 19,
+    "brand": "CREED",
+    "name": "Green Irish Tweed",
+    "scentFamily": "Fresh",
+    "topNotes": [
+      "Lemon Verbena",
+      "Iris"
+    ],
+    "middleNotes": [
+      "Violet Leaf"
+    ],
+    "baseNotes": [
+      "Ambergris",
+      "Sandalwood"
+    ],
+    "intensity": 3,
+    "longevity": 4,
+    "sweetness": 1,
+    "warmth": 2,
+    "season": "Spring",
+    "timeOfDay": "Day",
+    "gender": "Masculine",
+    "vibe": "Sophisticated",
+    "complexity": "Evolving",
+    "tier": "Niche",
+    "description": "A stroll through the Irish countryside. Freshly cut grass, spring rain, and fresh mountain herbs.",
+    "image": "assets/images/fresh.png"
+  },
+  {
+    "id": 20,
+    "brand": "DIPTYQUE",
+    "name": "Philosykos Eau de Toilette",
+    "scentFamily": "Fresh",
+    "topNotes": [
+      "Fig Leaf",
+      "Fig"
+    ],
+    "middleNotes": [
+      "Green Notes",
+      "Coconut"
+    ],
+    "baseNotes": [
+      "Fig Tree",
+      "Cedar",
+      "Woody Notes"
+    ],
+    "intensity": 3,
+    "longevity": 3,
+    "sweetness": 3,
+    "warmth": 2,
+    "season": "Summer",
+    "timeOfDay": "Day",
+    "gender": "Unisex",
+    "vibe": "Clean",
+    "complexity": "Evolving",
+    "tier": "Niche",
+    "description": "An ode to the entire fig tree: the green freshness of the leaves, the wood, and the milky sap.",
+    "image": "assets/images/fresh.png"
+  },
+  {
+    "id": 21,
+    "brand": "HERMES",
+    "name": "Un Jardin sur le Nil",
+    "scentFamily": "Fresh",
+    "topNotes": [
+      "Grapefruit",
+      "Green Mango",
+      "Tomato",
+      "Carrot"
+    ],
+    "middleNotes": [
+      "Lotus",
+      "Bulrush",
+      "Orange",
+      "Hyacinth",
+      "Peony"
+    ],
+    "baseNotes": [
+      "Musk",
+      "Iris",
+      "Incense",
+      "Labdanum",
+      "Cinnamon"
+    ],
+    "intensity": 2,
+    "longevity": 3,
+    "sweetness": 1,
+    "warmth": 2,
+    "season": "Summer",
+    "timeOfDay": "Day",
+    "gender": "Unisex",
+    "vibe": "Adventurous",
+    "complexity": "Evolving",
+    "tier": "Designer",
+    "description": "An olfactory stroll along the banks of the Nile, bursting with green mango, lotus, and sycamore wood.",
+    "image": "assets/images/fresh.png"
+  },
+  {
+    "id": 22,
+    "brand": "PENHALIGON'S",
+    "name": "Juniper Sling",
+    "scentFamily": "Fresh",
+    "topNotes": [
+      "Juniper Berries",
+      "Orange",
+      "Cinnamon",
+      "Angelica"
+    ],
+    "middleNotes": [
+      "Pepper",
+      "Cardamom",
+      "Leather",
+      "Orris Root"
+    ],
+    "baseNotes": [
+      "Vetiver",
+      "Cherry",
+      "Sugar",
+      "Amber"
+    ],
+    "intensity": 2,
+    "longevity": 2,
+    "sweetness": 2,
+    "warmth": 2,
+    "season": "Summer",
+    "timeOfDay": "Day",
+    "gender": "Unisex",
+    "vibe": "Clean",
+    "complexity": "Linear",
+    "tier": "Niche",
+    "description": "A playful tribute to the bright and crisp cocktail, London Dry Gin, filled with icy juniper berries.",
+    "image": "assets/images/fresh.png"
+  },
+  {
+    "id": 23,
+    "brand": "ACQUA DI PARMA",
+    "name": "Colonia",
+    "scentFamily": "Fresh",
+    "topNotes": [
+      "Lemon",
+      "Sweet Orange",
+      "Calabrian Bergamot"
+    ],
+    "middleNotes": [
+      "Lavender",
+      "Bulgarian Rose",
+      "Verbena",
+      "Rosemary"
+    ],
+    "baseNotes": [
+      "Vetiver",
+      "Sandalwood",
+      "Patchouli"
+    ],
+    "intensity": 2,
+    "longevity": 2,
+    "sweetness": 1,
+    "warmth": 2,
+    "season": "Summer",
+    "timeOfDay": "Day",
+    "gender": "Unisex",
+    "vibe": "Sophisticated",
+    "complexity": "Linear",
+    "tier": "Niche",
+    "description": "The classic definition of Italian refinement. Crisp citruses blended beautifully with light aromatics.",
+    "image": "assets/images/fresh.png"
+  },
+  {
+    "id": 24,
+    "brand": "AESOP",
+    "name": "Tacit",
+    "scentFamily": "Fresh",
+    "topNotes": [
+      "Yuzu",
+      "Citrus Notes",
+      "Basil"
+    ],
+    "middleNotes": [
+      "Rosemary",
+      "Mint"
+    ],
+    "baseNotes": [
+      "Vetiver",
+      "Cloves",
+      "Amber"
+    ],
+    "intensity": 2,
+    "longevity": 3,
+    "sweetness": 1,
+    "warmth": 2,
+    "season": "Summer",
+    "timeOfDay": "Day",
+    "gender": "Unisex",
+    "vibe": "Clean",
+    "complexity": "Linear",
+    "tier": "Niche",
+    "description": "A fresh and green fragrance, inspired by the Mediterranean coast and clean herbal gardens.",
+    "image": "assets/images/fresh.png"
+  },
+  {
+    "id": 25,
+    "brand": "DIPTYQUE",
+    "name": "L'Eau Papier",
+    "scentFamily": "Fresh",
+    "topNotes": [
+      "White Musk",
+      "Rice Steam"
+    ],
+    "middleNotes": [
+      "Mimosa",
+      "Sesame"
+    ],
+    "baseNotes": [
+      "Woody Notes",
+      "Ambrosia"
+    ],
+    "intensity": 2,
+    "longevity": 3,
+    "sweetness": 2,
+    "warmth": 2,
+    "season": "Spring",
+    "timeOfDay": "Day",
+    "gender": "Unisex",
+    "vibe": "Clean",
+    "complexity": "Evolving",
+    "tier": "Niche",
+    "description": "A celebration of musk, ink and paper, smelling like warm steamed rice and clean stationery.",
+    "image": "assets/images/fresh.png"
+  },
+  {
+    "id": 26,
+    "brand": "CHANEL",
+    "name": "No. 5 Eau de Parfum",
+    "scentFamily": "Floral",
+    "topNotes": [
+      "Aldehydes",
+      "Ylang-Ylang",
+      "Neroli",
+      "Bergamot",
+      "Peach"
+    ],
+    "middleNotes": [
+      "Iris",
+      "Jasmine",
+      "Rose",
+      "Lily-of-the-Valley"
+    ],
+    "baseNotes": [
+      "Sandalwood",
+      "Vanilla",
+      "Oakmoss",
+      "Vetiver",
+      "Patchouli"
+    ],
+    "intensity": 4,
+    "longevity": 4,
+    "sweetness": 2,
+    "warmth": 3,
+    "season": "Winter",
+    "timeOfDay": "Night",
+    "gender": "Feminine",
+    "vibe": "Sophisticated",
+    "complexity": "Evolving",
+    "tier": "Designer",
+    "description": "The very essence of femininity. A legendary, timeless floral bouquet made famous by Marilyn Monroe.",
+    "image": "assets/images/floral.png"
+  },
+  {
+    "id": 27,
+    "brand": "DIOR",
+    "name": "J'adore",
+    "scentFamily": "Floral",
+    "topNotes": [
+      "Pear",
+      "Melon",
+      "Peach",
+      "Magnolia",
+      "Mandarin Orange"
+    ],
+    "middleNotes": [
+      "Jasmine",
+      "Lily-of-the-Valley",
+      "Tuberose",
+      "Freeseia",
+      "Rose"
+    ],
+    "baseNotes": [
+      "Musk",
+      "Vanilla",
+      "Blackberry",
+      "Cedar"
+    ],
+    "intensity": 3,
+    "longevity": 4,
+    "sweetness": 3,
+    "warmth": 3,
+    "season": "Spring",
+    "timeOfDay": "Day",
+    "gender": "Feminine",
+    "vibe": "Sophisticated",
+    "complexity": "Linear",
+    "tier": "Designer",
+    "description": "An ode to women, their audacity and beauty. A golden, voluptuous floral bouquet.",
+    "image": "assets/images/floral.png"
+  },
+  {
+    "id": 28,
+    "brand": "GUCCI",
+    "name": "Bloom",
+    "scentFamily": "Floral",
+    "topNotes": [
+      "Jasmine"
+    ],
+    "middleNotes": [
+      "Tuberose"
+    ],
+    "baseNotes": [
+      "Rangoon Creeper"
+    ],
+    "intensity": 3,
+    "longevity": 3,
+    "sweetness": 3,
+    "warmth": 2,
+    "season": "Spring",
+    "timeOfDay": "Day",
+    "gender": "Feminine",
+    "vibe": "Romantic",
+    "complexity": "Linear",
+    "tier": "Designer",
+    "description": "Designed to celebrate the authenticity, vitality and diversity of women, smelling like a garden in bloom.",
+    "image": "assets/images/floral.png"
+  },
+  {
+    "id": 29,
+    "brand": "CHLOE",
+    "name": "Chloe Eau de Parfum",
+    "scentFamily": "Floral",
+    "topNotes": [
+      "Peony",
+      "Litchi",
+      "Freeseia"
+    ],
+    "middleNotes": [
+      "Rose",
+      "Lily-of-the-Valley",
+      "Magnolia"
+    ],
+    "baseNotes": [
+      "Virginia Cedar",
+      "Amber"
+    ],
+    "intensity": 3,
+    "longevity": 4,
+    "sweetness": 2,
+    "warmth": 2,
+    "season": "Spring",
+    "timeOfDay": "Day",
+    "gender": "Feminine",
+    "vibe": "Romantic",
+    "complexity": "Linear",
+    "tier": "Designer",
+    "description": "A fresh and feminine rose blend, perfect for a chic and romantic signature.",
+    "image": "assets/images/floral.png"
+  },
+  {
+    "id": 30,
+    "brand": "PARFUMS DE MARLY",
+    "name": "Delina",
+    "scentFamily": "Floral",
+    "topNotes": [
+      "Litchi",
+      "Rhubarb",
+      "Bergamot",
+      "Nutmeg"
+    ],
+    "middleNotes": [
+      "Turkish Rose",
+      "Peony",
+      "Musk",
+      "Petalia",
+      "Vanilla"
+    ],
+    "baseNotes": [
+      "Cashmeran",
+      "Cedar",
+      "Haitian Vetiver",
+      "Incense"
+    ],
+    "intensity": 4,
+    "longevity": 5,
+    "sweetness": 4,
+    "warmth": 3,
+    "season": "Spring",
+    "timeOfDay": "Day",
+    "gender": "Feminine",
+    "vibe": "Sophisticated",
+    "complexity": "Evolving",
+    "tier": "Niche",
+    "description": "A floral bouquet dominated by Turkish rose, lily of the valley and peony, with sweet, tart lychee notes.",
+    "image": "assets/images/floral.png"
+  },
+  {
+    "id": 31,
+    "brand": "VIKTOR & ROLF",
+    "name": "Flowerbomb",
+    "scentFamily": "Floral",
+    "topNotes": [
+      "Tea",
+      "Bergamot",
+      "Osmanthus"
+    ],
+    "middleNotes": [
+      "Orchid",
+      "Jasmine",
+      "Rose",
+      "Freeseia",
+      "Orange Flower"
+    ],
+    "baseNotes": [
+      "Patchouli",
+      "Musk"
+    ],
+    "intensity": 4,
+    "longevity": 4,
+    "sweetness": 5,
+    "warmth": 4,
+    "season": "Autumn",
+    "timeOfDay": "Night",
+    "gender": "Feminine",
+    "vibe": "Romantic",
+    "complexity": "Linear",
+    "tier": "Designer",
+    "description": "An explosive floral bouquet. A sweet, addictive sensation of thousands of jasmine and rose petals.",
+    "image": "assets/images/floral.png"
+  },
+  {
+    "id": 32,
+    "brand": "LE LABO",
+    "name": "Rose 31",
+    "scentFamily": "Floral",
+    "topNotes": [
+      "Rose",
+      "Cumin"
+    ],
+    "middleNotes": [
+      "Rose",
+      "Vetiver",
+      "Cedar"
+    ],
+    "baseNotes": [
+      "Musk",
+      "Guaiac Wood",
+      "Olibanum",
+      "Labdanum",
+      "Agarwood (Oud)"
+    ],
+    "intensity": 3,
+    "longevity": 4,
+    "sweetness": 1,
+    "warmth": 4,
+    "season": "Autumn",
+    "timeOfDay": "All",
+    "gender": "Unisex",
+    "vibe": "Mysterious",
+    "complexity": "Evolving",
+    "tier": "Niche",
+    "description": "Transforms the famous feminine Grasse Rose into an assertively virile and woody spice fragrance.",
+    "image": "assets/images/floral.png"
+  },
+  {
+    "id": 33,
+    "brand": "JO MALONE",
+    "name": "English Pear & Freesia",
+    "scentFamily": "Floral",
+    "topNotes": [
+      "King William Pear",
+      "Melon"
+    ],
+    "middleNotes": [
+      "Freesia",
+      "Rose"
+    ],
+    "baseNotes": [
+      "Patchouli",
+      "Amber",
+      "Musk",
+      "Rhubarb"
+    ],
+    "intensity": 3,
+    "longevity": 3,
+    "sweetness": 3,
+    "warmth": 2,
+    "season": "Autumn",
+    "timeOfDay": "Day",
+    "gender": "Feminine",
+    "vibe": "Clean",
+    "complexity": "Linear",
+    "tier": "Niche",
+    "description": "The essence of autumn. The sensuous freshness of just-ripe pears wrapped in a bouquet of white freesias.",
+    "image": "assets/images/floral.png"
+  },
+  {
+    "id": 34,
+    "brand": "DIPTYQUE",
+    "name": "Do Son Eau de Parfum",
+    "scentFamily": "Floral",
+    "topNotes": [
+      "Tuberose",
+      "Orange Leaf"
+    ],
+    "middleNotes": [
+      "Tuberose",
+      "Pink Pepper"
+    ],
+    "baseNotes": [
+      "Musk",
+      "Amberwood"
+    ],
+    "intensity": 4,
+    "longevity": 4,
+    "sweetness": 3,
+    "warmth": 2,
+    "season": "Spring",
+    "timeOfDay": "Day",
+    "gender": "Feminine",
+    "vibe": "Romantic",
+    "complexity": "Linear",
+    "tier": "Niche",
+    "description": "Inspired by childhood memories in Indochina, smelling of fresh tuberose carried by a warm sea breeze.",
+    "image": "assets/images/floral.png"
+  },
+  {
+    "id": 35,
+    "brand": "BYREDO",
+    "name": "La Tulipe",
+    "scentFamily": "Floral",
+    "topNotes": [
+      "Freeseia",
+      "Cyclamen",
+      "Rhubarb"
+    ],
+    "middleNotes": [
+      "Pink Tulip"
+    ],
+    "baseNotes": [
+      "Green Notes",
+      "Blonde Woods",
+      "Vetiver"
+    ],
+    "intensity": 2,
+    "longevity": 3,
+    "sweetness": 2,
+    "warmth": 1,
+    "season": "Spring",
+    "timeOfDay": "Day",
+    "gender": "Feminine",
+    "vibe": "Clean",
+    "complexity": "Linear",
+    "tier": "Niche",
+    "description": "Recreates the clean, early morning freshness of spring gardens and the green smell of fresh tulips.",
+    "image": "assets/images/floral.png"
+  },
+  {
+    "id": 36,
+    "brand": "GIVENCHY",
+    "name": "L'Interdit Eau de Parfum",
+    "scentFamily": "Floral",
+    "topNotes": [
+      "Pear",
+      "Bergamot"
+    ],
+    "middleNotes": [
+      "Tuberose",
+      "Orange Blossom",
+      "Jasmine Sambac"
+    ],
+    "baseNotes": [
+      "Patchouli",
+      "Vanilla",
+      "Ambroxan",
+      "Vetiver"
+    ],
+    "intensity": 4,
+    "longevity": 4,
+    "sweetness": 4,
+    "warmth": 3,
+    "season": "Winter",
+    "timeOfDay": "Night",
+    "gender": "Feminine",
+    "vibe": "Sophisticated",
+    "complexity": "Evolving",
+    "tier": "Designer",
+    "description": "A tribute to bold femininity. A white flower bouquet cutting through dark, earthy woody base notes.",
+    "image": "assets/images/floral.png"
+  },
+  {
+    "id": 37,
+    "brand": "FREDERIC MALLE",
+    "name": "Carnal Flower",
+    "scentFamily": "Floral",
+    "topNotes": [
+      "Eucalyptus",
+      "Melon",
+      "Bergamot"
+    ],
+    "middleNotes": [
+      "Tuberose",
+      "Ylang-Ylang",
+      "Jasmine"
+    ],
+    "baseNotes": [
+      "Coconut",
+      "White Musk"
+    ],
+    "intensity": 5,
+    "longevity": 5,
+    "sweetness": 3,
+    "warmth": 3,
+    "season": "Summer",
+    "timeOfDay": "All",
+    "gender": "Unisex",
+    "vibe": "Mysterious",
+    "complexity": "Evolving",
+    "tier": "Niche",
+    "description": "A majestic tuberose infused with green eucalyptus freshness, turning into a creamy, carnal embrace.",
+    "image": "assets/images/floral.png"
+  },
+  {
+    "id": 38,
+    "brand": "LANCOME",
+    "name": "La Vie Est Belle",
+    "scentFamily": "Floral",
+    "topNotes": [
+      "Blackcurrant",
+      "Pear"
+    ],
+    "middleNotes": [
+      "Iris",
+      "Jasmine",
+      "Orange Blossom"
+    ],
+    "baseNotes": [
+      "Praline",
+      "Vanilla",
+      "Patchouli",
+      "Tonka Bean"
+    ],
+    "intensity": 4,
+    "longevity": 5,
+    "sweetness": 5,
+    "warmth": 4,
+    "season": "Winter",
+    "timeOfDay": "All",
+    "gender": "Feminine",
+    "vibe": "Romantic",
+    "complexity": "Linear",
+    "tier": "Designer",
+    "description": "A sweet gourmand floral signature featuring patchouli, iris, and a massive burst of sugar praline.",
+    "image": "assets/images/floral.png"
+  },
+  {
+    "id": 39,
+    "brand": "MARC JACOBS",
+    "name": "Daisy",
+    "scentFamily": "Floral",
+    "topNotes": [
+      "Violet Leaf",
+      "Blood Grapefruit",
+      "Strawberry"
+    ],
+    "middleNotes": [
+      "Violet",
+      "Gardenia",
+      "Jasmine"
+    ],
+    "baseNotes": [
+      "Musk",
+      "White Woods",
+      "Vanilla"
+    ],
+    "intensity": 2,
+    "longevity": 2,
+    "sweetness": 3,
+    "warmth": 1,
+    "season": "Spring",
+    "timeOfDay": "Day",
+    "gender": "Feminine",
+    "vibe": "Clean",
+    "complexity": "Linear",
+    "tier": "Designer",
+    "description": "Bright and playful, capturing violet leaves and wild strawberries in a fresh white wood garden.",
+    "image": "assets/images/floral.png"
+  },
+  {
+    "id": 40,
+    "brand": "YVES SAINT LAURENT",
+    "name": "Libre Eau de Parfum",
+    "scentFamily": "Floral",
+    "topNotes": [
+      "Lavender",
+      "Mandarin Orange",
+      "Blackcurrant",
+      "Petitgrain"
+    ],
+    "middleNotes": [
+      "Lavender",
+      "Orange Blossom",
+      "Jasmine"
+    ],
+    "baseNotes": [
+      "Madagascar Vanilla",
+      "Musk",
+      "Cedar",
+      "Ambergris"
+    ],
+    "intensity": 4,
+    "longevity": 4,
+    "sweetness": 3,
+    "warmth": 3,
+    "season": "Autumn",
+    "timeOfDay": "All",
+    "gender": "Feminine",
+    "vibe": "Sophisticated",
+    "complexity": "Evolving",
+    "tier": "Designer",
+    "description": "The fragrance of freedom. Tension between French lavender and burning Moroccan orange blossom.",
+    "image": "assets/images/floral.png"
+  },
+  {
+    "id": 41,
+    "brand": "MAISON FRANCIS KURKDJIAN",
+    "name": "Amyris Femme",
+    "scentFamily": "Floral",
+    "topNotes": [
+      "Lemon Blossom",
+      "California Orange"
+    ],
+    "middleNotes": [
+      "Amyris",
+      "Iris"
+    ],
+    "baseNotes": [
+      "Vetiver",
+      "Musk",
+      "Amber"
+    ],
+    "intensity": 3,
+    "longevity": 4,
+    "sweetness": 2,
+    "warmth": 2,
+    "season": "Spring",
+    "timeOfDay": "Day",
+    "gender": "Feminine",
+    "vibe": "Sophisticated",
+    "complexity": "Linear",
+    "tier": "Niche",
+    "description": "A bright and elegant fragrance, blending Jamaican amyris wood and Florentine iris in a solar kiss.",
+    "image": "assets/images/floral.png"
+  },
+  {
+    "id": 42,
+    "brand": "CREED",
+    "name": "Spring Flower",
+    "scentFamily": "Floral",
+    "topNotes": [
+      "Grapefruit",
+      "Lemon",
+      "Green Notes"
+    ],
+    "middleNotes": [
+      "Jasmine",
+      "White Flowers",
+      "Peach",
+      "Apricot"
+    ],
+    "baseNotes": [
+      "Ambergris",
+      "Musk"
+    ],
+    "intensity": 3,
+    "longevity": 3,
+    "sweetness": 3,
+    "warmth": 2,
+    "season": "Spring",
+    "timeOfDay": "Day",
+    "gender": "Feminine",
+    "vibe": "Clean",
+    "complexity": "Linear",
+    "tier": "Niche",
+    "description": "A playful, fresh floral blend capturing peach and apricot notes with fresh spring blossoms.",
+    "image": "assets/images/floral.png"
+  },
+  {
+    "id": 43,
+    "brand": "PENHALIGON'S",
+    "name": "Elisabethan Rose",
+    "scentFamily": "Floral",
+    "topNotes": [
+      "Hazelnut Leaf",
+      "Tangerine",
+      "Almond"
+    ],
+    "middleNotes": [
+      "Damask Rose",
+      "Red Lily",
+      "Geranium"
+    ],
+    "baseNotes": [
+      "Musk",
+      "Woody Notes",
+      "Plum"
+    ],
+    "intensity": 3,
+    "longevity": 3,
+    "sweetness": 2,
+    "warmth": 2,
+    "season": "Spring",
+    "timeOfDay": "Day",
+    "gender": "Feminine",
+    "vibe": "Romantic",
+    "complexity": "Evolving",
+    "tier": "Niche",
+    "description": "A regal and demanding rose, blending earthy hazelnut leaf and velvety petals fit for a queen.",
+    "image": "assets/images/floral.png"
+  },
+  {
+    "id": 44,
+    "brand": "BYREDO",
+    "name": "Inflorescence",
+    "scentFamily": "Floral",
+    "topNotes": [
+      "Pink Freesia",
+      "Rose"
+    ],
+    "middleNotes": [
+      "Lily-of-the-Valley",
+      "Magnolia"
+    ],
+    "baseNotes": [
+      "Jasmine"
+    ],
+    "intensity": 2,
+    "longevity": 3,
+    "sweetness": 2,
+    "warmth": 1,
+    "season": "Spring",
+    "timeOfDay": "Day",
+    "gender": "Feminine",
+    "vibe": "Clean",
+    "complexity": "Linear",
+    "tier": "Niche",
+    "description": "A wild garden rising at spring. A crisp, green floral tribute to new garden blooms.",
+    "image": "assets/images/floral.png"
+  },
+  {
+    "id": 45,
+    "brand": "JO MALONE",
+    "name": "Peony & Blush Suede",
+    "scentFamily": "Floral",
+    "topNotes": [
+      "Red Apple"
+    ],
+    "middleNotes": [
+      "Peony",
+      "Jasmine",
+      "Carnation",
+      "Rose"
+    ],
+    "baseNotes": [
+      "Suede"
+    ],
+    "intensity": 3,
+    "longevity": 3,
+    "sweetness": 3,
+    "warmth": 3,
+    "season": "Spring",
+    "timeOfDay": "Day",
+    "gender": "Feminine",
+    "vibe": "Romantic",
+    "complexity": "Linear",
+    "tier": "Niche",
+    "description": "Flirtatious peonies in voluptuous bloom, paired with the bite of red apples and soft blush suede.",
+    "image": "assets/images/floral.png"
+  },
+  {
+    "id": 46,
+    "brand": "HERMES",
+    "name": "Twilly d'Hermes",
+    "scentFamily": "Floral",
+    "topNotes": [
+      "Ginger",
+      "Bitter Orange",
+      "Bergamot"
+    ],
+    "middleNotes": [
+      "Tuberose",
+      "Orange Blossom",
+      "Jasmine"
+    ],
+    "baseNotes": [
+      "Sandalwood",
+      "Vanilla"
+    ],
+    "intensity": 3,
+    "longevity": 4,
+    "sweetness": 3,
+    "warmth": 3,
+    "season": "Fall",
+    "timeOfDay": "Day",
+    "gender": "Feminine",
+    "vibe": "Adventurous",
+    "complexity": "Evolving",
+    "tier": "Designer",
+    "description": "A daring perfume of ginger spiciness and opulent tuberose, designed for active young women.",
+    "image": "assets/images/floral.png"
+  },
+  {
+    "id": 47,
+    "brand": "KILIAN",
+    "name": "Love Don't Be Shy",
+    "scentFamily": "Floral",
+    "topNotes": [
+      "Neroli",
+      "Bergamot",
+      "Pink Pepper",
+      "Coriander"
+    ],
+    "middleNotes": [
+      "Orange Blossom",
+      "Honeysuckle",
+      "Jasmine",
+      "Iris",
+      "Rose"
+    ],
+    "baseNotes": [
+      "Sugar",
+      "Vanilla",
+      "Caramel",
+      "Musk",
+      "Civet",
+      "Labdanum"
+    ],
+    "intensity": 4,
+    "longevity": 5,
+    "sweetness": 5,
+    "warmth": 4,
+    "season": "Winter",
+    "timeOfDay": "All",
+    "gender": "Feminine",
+    "vibe": "Romantic",
+    "complexity": "Evolving",
+    "tier": "Niche",
+    "description": "An absolute marshmallow-orange blossom treat. Succulent sugar vanilla and innocent flowers.",
+    "image": "assets/images/floral.png"
+  },
+  {
+    "id": 48,
+    "brand": "DIOR",
+    "name": "Miss Dior Eau de Parfum",
+    "scentFamily": "Floral",
+    "topNotes": [
+      "Iris",
+      "Peony",
+      "Lily-of-the-Valley"
+    ],
+    "middleNotes": [
+      "Rose",
+      "Peach",
+      "Apricot"
+    ],
+    "baseNotes": [
+      "Vanilla",
+      "Tonka Bean",
+      "Musk",
+      "Benzoin",
+      "Sandalwood"
+    ],
+    "intensity": 3,
+    "longevity": 4,
+    "sweetness": 3,
+    "warmth": 3,
+    "season": "Spring",
+    "timeOfDay": "Day",
+    "gender": "Feminine",
+    "vibe": "Romantic",
+    "complexity": "Linear",
+    "tier": "Designer",
+    "description": "An olfactory 'millefiori' garden. Centifolia Rose, iris, and fresh peony under creamy woods.",
+    "image": "assets/images/floral.png"
+  },
+  {
+    "id": 49,
+    "brand": "TOM FORD",
+    "name": "Jasmin Rouge",
+    "scentFamily": "Floral",
+    "topNotes": [
+      "Cinnamon",
+      "Ginger",
+      "Black Pepper",
+      "Cardamom",
+      "Bergamot",
+      "Mandarin Orange"
+    ],
+    "middleNotes": [
+      "Jasmine",
+      "Ylang-Ylang",
+      "Neroli",
+      "Broom",
+      "Clary Sage"
+    ],
+    "baseNotes": [
+      "Amber",
+      "Woody Notes",
+      "Vanila",
+      "Leather",
+      "French Labdanum"
+    ],
+    "intensity": 4,
+    "longevity": 4,
+    "sweetness": 3,
+    "warmth": 4,
+    "season": "Winter",
+    "timeOfDay": "Night",
+    "gender": "Feminine",
+    "vibe": "Mysterious",
+    "complexity": "Evolving",
+    "tier": "Niche",
+    "description": "A saturated, spiced floral signature of decadent jasmine and rich, dark spices.",
+    "image": "assets/images/floral.png"
+  },
+  {
+    "id": 50,
+    "brand": "FREDERIC MALLE",
+    "name": "Portrait of a Lady",
+    "scentFamily": "Floral",
+    "topNotes": [
+      "Rose",
+      "Clove",
+      "Raspberry",
+      "Blackcurrant",
+      "Cinnamon"
+    ],
+    "middleNotes": [
+      "Patchouli",
+      "Incense",
+      "Sandalwood"
+    ],
+    "baseNotes": [
+      "Musk",
+      "Benzoin",
+      "Amber"
+    ],
+    "intensity": 5,
+    "longevity": 5,
+    "sweetness": 2,
+    "warmth": 4,
+    "season": "Winter",
+    "timeOfDay": "Night",
+    "gender": "Feminine",
+    "vibe": "Sophisticated",
+    "complexity": "Evolving",
+    "tier": "Niche",
+    "description": "A baroque rose. A heavy dose of Turkish rose blended with patchouli, incense, and deep cinnamon.",
+    "image": "assets/images/floral.png"
+  },
+  {
+    "id": 51,
+    "brand": "LE LABO",
+    "name": "Santal 33",
+    "scentFamily": "Woody",
+    "topNotes": [
+      "Violet Accord",
+      "Cardamom"
+    ],
+    "middleNotes": [
+      "Iris",
+      "Ambrox",
+      "Papyrus"
+    ],
+    "baseNotes": [
+      "Sandalwood",
+      "Leather",
+      "Cedarwood"
+    ],
+    "intensity": 4,
+    "longevity": 5,
+    "sweetness": 2,
+    "warmth": 3,
+    "season": "Autumn",
+    "timeOfDay": "All",
+    "gender": "Unisex",
+    "vibe": "Sophisticated",
+    "complexity": "Linear",
+    "tier": "Niche",
+    "description": "The fragrance of the American West. A heavy dose of dry cardamom, leather, and creamy sandalwood.",
+    "image": "assets/images/woody.png"
+  },
+  {
+    "id": 52,
+    "brand": "TOM FORD",
+    "name": "Oud Wood",
+    "scentFamily": "Woody",
+    "topNotes": [
+      "Rosewood",
+      "Cardamom",
+      "Chinese Pepper"
+    ],
+    "middleNotes": [
+      "Oud",
+      "Sandalwood",
+      "Vetiver"
+    ],
+    "baseNotes": [
+      "Tonka Bean",
+      "Vanilla",
+      "Amber"
+    ],
+    "intensity": 3,
+    "longevity": 4,
+    "sweetness": 2,
+    "warmth": 4,
+    "season": "Winter",
+    "timeOfDay": "Night",
+    "gender": "Unisex",
+    "vibe": "Sophisticated",
+    "complexity": "Linear",
+    "tier": "Niche",
+    "description": "One of the most rare, precious, and expensive ingredients in a perfumer's arsenal, oud wood.",
+    "image": "assets/images/woody.png"
+  },
+  {
+    "id": 53,
+    "brand": "HERMES",
+    "name": "Terre d'Hermes",
+    "scentFamily": "Woody",
+    "topNotes": [
+      "Orange",
+      "Grapefruit"
+    ],
+    "middleNotes": [
+      "Pepper",
+      "Pelargonium"
+    ],
+    "baseNotes": [
+      "Vetiver",
+      "Cedar",
+      "Patchouli",
+      "Benzoin"
+    ],
+    "intensity": 3,
+    "longevity": 4,
+    "sweetness": 1,
+    "warmth": 3,
+    "season": "Autumn",
+    "timeOfDay": "Day",
+    "gender": "Masculine",
+    "vibe": "Sophisticated",
+    "complexity": "Evolving",
+    "tier": "Designer",
+    "description": "A narrative structure exploring the chemistry of earth and flint, featuring orange and vetiver.",
+    "image": "assets/images/woody.png"
+  },
+  {
+    "id": 54,
+    "brand": "CREED",
+    "name": "Royal Oud",
+    "scentFamily": "Woody",
+    "topNotes": [
+      "Lemon",
+      "Pink Pepper",
+      "Bergamot"
+    ],
+    "middleNotes": [
+      "Cedar",
+      "Galbanum",
+      "Angelica Root"
+    ],
+    "baseNotes": [
+      "Oud",
+      "Sandalwood",
+      "Tonkin Musk"
+    ],
+    "intensity": 4,
+    "longevity": 4,
+    "sweetness": 1,
+    "warmth": 4,
+    "season": "Winter",
+    "timeOfDay": "Night",
+    "gender": "Unisex",
+    "vibe": "Sophisticated",
+    "complexity": "Evolving",
+    "tier": "Niche",
+    "description": "Wood, leather, marble and gold. A grand, dry cedarwood with a subtle, dark oud core.",
+    "image": "assets/images/woody.png"
+  },
+  {
+    "id": 55,
+    "brand": "BYREDO",
+    "name": "Gypsy Water",
+    "scentFamily": "Woody",
+    "topNotes": [
+      "Juniper",
+      "Lemon",
+      "Bergamot",
+      "Pepper"
+    ],
+    "middleNotes": [
+      "Pine Needles",
+      "Incense",
+      "Orris Root"
+    ],
+    "baseNotes": [
+      "Sandalwood",
+      "Vanilla",
+      "Amber"
+    ],
+    "intensity": 2,
+    "longevity": 2,
+    "sweetness": 2,
+    "warmth": 3,
+    "season": "Spring",
+    "timeOfDay": "Day",
+    "gender": "Unisex",
+    "vibe": "Clean",
+    "complexity": "Linear",
+    "tier": "Niche",
+    "description": "A glamorization of the Romany lifestyle, based on the scent of fresh soil, deep pine forests and campfires.",
+    "image": "assets/images/woody.png"
+  },
+  {
+    "id": 56,
+    "brand": "DIPTYQUE",
+    "name": "Tam Dao Eau de Parfum",
+    "scentFamily": "Woody",
+    "topNotes": [
+      "Lime",
+      "Coriander",
+      "Ginger"
+    ],
+    "middleNotes": [
+      "Sandalwood",
+      "Cedar",
+      "Amberwood"
+    ],
+    "baseNotes": [
+      "Rosewood",
+      "White Musk"
+    ],
+    "intensity": 3,
+    "longevity": 4,
+    "sweetness": 1,
+    "warmth": 3,
+    "season": "Autumn",
+    "timeOfDay": "All",
+    "gender": "Unisex",
+    "vibe": "Sophisticated",
+    "complexity": "Linear",
+    "tier": "Niche",
+    "description": "A memory of East Asian temples and high mountain forests. Creamy Mysore Sandalwood.",
+    "image": "assets/images/woody.png"
+  },
+  {
+    "id": 57,
+    "brand": "LALIQUE",
+    "name": "Encre Noire",
+    "scentFamily": "Woody",
+    "topNotes": [
+      "Cypress"
+    ],
+    "middleNotes": [
+      "Haitian Vetiver",
+      "Vetiver"
+    ],
+    "baseNotes": [
+      "Cashmere Wood",
+      "Musk"
+    ],
+    "intensity": 4,
+    "longevity": 4,
+    "sweetness": 1,
+    "warmth": 3,
+    "season": "Winter",
+    "timeOfDay": "Night",
+    "gender": "Masculine",
+    "vibe": "Mysterious",
+    "complexity": "Linear",
+    "tier": "Designer",
+    "description": "A dark, moody vetiver that smells like damp forest earth, dark ink, and fresh cypress leaves.",
+    "image": "assets/images/woody.png"
+  },
+  {
+    "id": 58,
+    "brand": "TOM FORD",
+    "name": "Grey Vetiver",
+    "scentFamily": "Woody",
+    "topNotes": [
+      "Grapefruit",
+      "Orange Blossom",
+      "Sage"
+    ],
+    "middleNotes": [
+      "Nutmeg",
+      "Orris Root",
+      "Pimento"
+    ],
+    "baseNotes": [
+      "Vetiver",
+      "Woody Notes",
+      "Oakmoss",
+      "Amber"
+    ],
+    "intensity": 3,
+    "longevity": 4,
+    "sweetness": 1,
+    "warmth": 2,
+    "season": "Summer",
+    "timeOfDay": "Day",
+    "gender": "Masculine",
+    "vibe": "Clean",
+    "complexity": "Linear",
+    "tier": "Niche",
+    "description": "A masterfully clean vetiver infused with citrus, rosemary and light, modern woods.",
+    "image": "assets/images/woody.png"
+  },
+  {
+    "id": 59,
+    "brand": "CHANEL",
+    "name": "Sycomore Exclusif",
+    "scentFamily": "Woody",
+    "topNotes": [
+      "Aldehydes",
+      "Pink Pepper"
+    ],
+    "middleNotes": [
+      "Vetiver",
+      "Juniper",
+      "Cypress"
+    ],
+    "baseNotes": [
+      "Sandalwood",
+      "Tobacco",
+      "Leather"
+    ],
+    "intensity": 4,
+    "longevity": 5,
+    "sweetness": 1,
+    "warmth": 3,
+    "season": "Autumn",
+    "timeOfDay": "All",
+    "gender": "Unisex",
+    "vibe": "Sophisticated",
+    "complexity": "Evolving",
+    "tier": "Niche",
+    "description": "A noble, smoky vetiver from Chanel's high art line, conveying dry, majestic autumn woods.",
+    "image": "assets/images/woody.png"
+  },
+  {
+    "id": 60,
+    "brand": "COMME DES GARCONS",
+    "name": "Wonderwood",
+    "scentFamily": "Woody",
+    "topNotes": [
+      "Pepper",
+      "Bergamot",
+      "Nutmeg"
+    ],
+    "middleNotes": [
+      "Cedarwood",
+      "Sandalwood",
+      "Patchouli"
+    ],
+    "baseNotes": [
+      "Vetiver",
+      "Guaiac Wood",
+      "Oud",
+      "Cypress"
+    ],
+    "intensity": 4,
+    "longevity": 4,
+    "sweetness": 1,
+    "warmth": 3,
+    "season": "Winter",
+    "timeOfDay": "Night",
+    "gender": "Unisex",
+    "vibe": "Adventurous",
+    "complexity": "Linear",
+    "tier": "Niche",
+    "description": "An overdose of wood. A deep, dense forest filled with cypress, cedar, and deep spices.",
+    "image": "assets/images/woody.png"
+  },
+  {
+    "id": 61,
+    "brand": "AESOP",
+    "name": "Hwyl",
+    "scentFamily": "Woody",
+    "topNotes": [
+      "Spices",
+      "Thyme"
+    ],
+    "middleNotes": [
+      "Cypress"
+    ],
+    "baseNotes": [
+      "Vetiver",
+      "Frankincense",
+      "Moss"
+    ],
+    "intensity": 3,
+    "longevity": 4,
+    "sweetness": 1,
+    "warmth": 3,
+    "season": "Autumn",
+    "timeOfDay": "All",
+    "gender": "Unisex",
+    "vibe": "Mysterious",
+    "complexity": "Evolving",
+    "tier": "Niche",
+    "description": "An escape to the ancient Japanese hinoki cypress forests, smoky, dark, and earth-bound.",
+    "image": "assets/images/woody.png"
+  },
+  {
+    "id": 62,
+    "brand": "DS & DURGA",
+    "name": "Bowmakers",
+    "scentFamily": "Woody",
+    "topNotes": [
+      "Violin Varnish",
+      "Mahogany"
+    ],
+    "middleNotes": [
+      "Pine",
+      "Maplewood"
+    ],
+    "baseNotes": [
+      "Amber",
+      "Cedar",
+      "Resin"
+    ],
+    "intensity": 4,
+    "longevity": 4,
+    "sweetness": 2,
+    "warmth": 4,
+    "season": "Winter",
+    "timeOfDay": "Night",
+    "gender": "Unisex",
+    "vibe": "Sophisticated",
+    "complexity": "Evolving",
+    "tier": "Niche",
+    "description": "Smells like the deep workshops of pioneer violin makers. Varnished woods, pine, and resin.",
+    "image": "assets/images/woody.png"
+  },
+  {
+    "id": 63,
+    "brand": "JO MALONE",
+    "name": "English Oak & Hazelnut",
+    "scentFamily": "Woody",
+    "topNotes": [
+      "Green Hazelnut"
+    ],
+    "middleNotes": [
+      "Cedarwood"
+    ],
+    "baseNotes": [
+      "Roasted Oak"
+    ],
+    "intensity": 3,
+    "longevity": 3,
+    "sweetness": 1,
+    "warmth": 3,
+    "season": "Autumn",
+    "timeOfDay": "Day",
+    "gender": "Unisex",
+    "vibe": "Adventurous",
+    "complexity": "Linear",
+    "tier": "Niche",
+    "description": "An enchanted walk. The crunch of green hazelnuts followed by roasted oakwood trails.",
+    "image": "assets/images/woody.png"
+  },
+  {
+    "id": 64,
+    "brand": "BYREDO",
+    "name": "Super Cedar",
+    "scentFamily": "Woody",
+    "topNotes": [
+      "Rose"
+    ],
+    "middleNotes": [
+      "Virginian Cedar"
+    ],
+    "baseNotes": [
+      "Haitian Vetiver",
+      "Musk"
+    ],
+    "intensity": 2,
+    "longevity": 3,
+    "sweetness": 1,
+    "warmth": 2,
+    "season": "Spring",
+    "timeOfDay": "Day",
+    "gender": "Unisex",
+    "vibe": "Clean",
+    "complexity": "Linear",
+    "tier": "Niche",
+    "description": "Warm, dry pencil shavings. Modern cedar wood softened by a light rose top note.",
+    "image": "assets/images/woody.png"
+  },
+  {
+    "id": 65,
+    "brand": "KILIAN",
+    "name": "Sacred Wood",
+    "scentFamily": "Woody",
+    "topNotes": [
+      "Coriander",
+      "Cumin"
+    ],
+    "middleNotes": [
+      "Mysore Sandalwood",
+      "Amyris"
+    ],
+    "baseNotes": [
+      "Copaiba Balsam",
+      "Myrrh"
+    ],
+    "intensity": 3,
+    "longevity": 4,
+    "sweetness": 2,
+    "warmth": 4,
+    "season": "Winter",
+    "timeOfDay": "All",
+    "gender": "Unisex",
+    "vibe": "Sophisticated",
+    "complexity": "Linear",
+    "tier": "Niche",
+    "description": "An absolute homage to genuine Indian Mysore Sandalwood. Creamy, spiritual, and deep.",
+    "image": "assets/images/woody.png"
+  },
+  {
+    "id": 66,
+    "brand": "SERGE LUTENS",
+    "name": "Feminite du Bois",
+    "scentFamily": "Woody",
+    "topNotes": [
+      "Plum",
+      "Peach",
+      "Cinnamon"
+    ],
+    "middleNotes": [
+      "Cedarwood",
+      "Ginger",
+      "Violet",
+      "Rose",
+      "Clove"
+    ],
+    "baseNotes": [
+      "Sandalwood",
+      "Benzoin",
+      "Vanilla",
+      "Musk"
+    ],
+    "intensity": 3,
+    "longevity": 4,
+    "sweetness": 3,
+    "warmth": 4,
+    "season": "Autumn",
+    "timeOfDay": "Night",
+    "gender": "Unisex",
+    "vibe": "Mysterious",
+    "complexity": "Evolving",
+    "tier": "Niche",
+    "description": "A pioneer woody fragrance for women. Deep dry cedarwood sweetened by ripe plum and hot cinnamon.",
+    "image": "assets/images/woody.png"
+  },
+  {
+    "id": 67,
+    "brand": "LE LABO",
+    "name": "Vetiver 46",
+    "scentFamily": "Woody",
+    "topNotes": [
+      "Pepper",
+      "Clove"
+    ],
+    "middleNotes": [
+      "Haitian Vetiver",
+      "Incense"
+    ],
+    "baseNotes": [
+      "Cedar",
+      "Sandalwood",
+      "Labdanum"
+    ],
+    "intensity": 4,
+    "longevity": 4,
+    "sweetness": 1,
+    "warmth": 4,
+    "season": "Winter",
+    "timeOfDay": "Night",
+    "gender": "Unisex",
+    "vibe": "Mysterious",
+    "complexity": "Evolving",
+    "tier": "Niche",
+    "description": "A dark, smoky vetiver combined with deep church incense, pepper, and dry cedar.",
+    "image": "assets/images/woody.png"
+  },
+  {
+    "id": 68,
+    "brand": "PENHALIGON'S",
+    "name": "The Tragedy of Lord George",
+    "scentFamily": "Woody",
+    "topNotes": [
+      "Rum"
+    ],
+    "middleNotes": [
+      "Shaving Soap"
+    ],
+    "baseNotes": [
+      "Tonka Bean",
+      "Woody Notes"
+    ],
+    "intensity": 3,
+    "longevity": 3,
+    "sweetness": 3,
+    "warmth": 4,
+    "season": "Winter",
+    "timeOfDay": "Night",
+    "gender": "Masculine",
+    "vibe": "Sophisticated",
+    "complexity": "Linear",
+    "tier": "Niche",
+    "description": "The classic English gentleman. Booze, soap, and tonka wood. Elegant, traditional, and regal.",
+    "image": "assets/images/woody.png"
+  },
+  {
+    "id": 69,
+    "brand": "MAISON MARGIELA",
+    "name": "Replica Under the Lemon Trees",
+    "scentFamily": "Woody",
+    "topNotes": [
+      "Lime",
+      "Petitgrain",
+      "Cardamom"
+    ],
+    "middleNotes": [
+      "Green Tea",
+      "Coriander",
+      "Mate"
+    ],
+    "baseNotes": [
+      "White Musk",
+      "Cedar",
+      "Rockrose"
+    ],
+    "intensity": 2,
+    "longevity": 3,
+    "sweetness": 1,
+    "warmth": 2,
+    "season": "Summer",
+    "timeOfDay": "Day",
+    "gender": "Unisex",
+    "vibe": "Clean",
+    "complexity": "Linear",
+    "tier": "Niche",
+    "description": "Strolling through Palermo's lemon groves. Sun-drenched leaves, zesty lemon skin and soft cedarwood.",
+    "image": "assets/images/woody.png"
+  },
+  {
+    "id": 70,
+    "brand": "DIPTYQUE",
+    "name": "Eau Duelle Eau de Parfum",
+    "scentFamily": "Woody",
+    "topNotes": [
+      "Pink Pepper",
+      "Juniper Berries",
+      "Cardamom"
+    ],
+    "middleNotes": [
+      "Frankincense",
+      "Black Tea"
+    ],
+    "baseNotes": [
+      "Bourbon Vanilla",
+      "Vetiver",
+      "Cypriol"
+    ],
+    "intensity": 3,
+    "longevity": 4,
+    "sweetness": 3,
+    "warmth": 3,
+    "season": "Autumn",
+    "timeOfDay": "All",
+    "gender": "Unisex",
+    "vibe": "Romantic",
+    "complexity": "Evolving",
+    "tier": "Niche",
+    "description": "An elegant, dry vanilla, balanced by dark black tea and smoky frankincense wood.",
+    "image": "assets/images/woody.png"
+  },
+  {
+    "id": 71,
+    "brand": "HERMES",
+    "name": "Voyage d'Hermes",
+    "scentFamily": "Woody",
+    "topNotes": [
+      "Cardamom",
+      "Lemon",
+      "Spices"
+    ],
+    "middleNotes": [
+      "Tea",
+      "Green Notes",
+      "Floral Notes"
+    ],
+    "baseNotes": [
+      "Woody Notes",
+      "Musk",
+      "Amber"
+    ],
+    "intensity": 3,
+    "longevity": 3,
+    "sweetness": 1,
+    "warmth": 2,
+    "season": "Spring",
+    "timeOfDay": "Day",
+    "gender": "Unisex",
+    "vibe": "Adventurous",
+    "complexity": "Linear",
+    "tier": "Designer",
+    "description": "A lively, active woody spice blend, bursting with green cardamom pods and dry woods.",
+    "image": "assets/images/woody.png"
+  },
+  {
+    "id": 72,
+    "brand": "BYREDO",
+    "name": "Mojave Ghost",
+    "scentFamily": "Woody",
+    "topNotes": [
+      "Sapodilla",
+      "Ambrette Seeds"
+    ],
+    "middleNotes": [
+      "Magnolia",
+      "Violet",
+      "Sandalwood"
+    ],
+    "baseNotes": [
+      "Cedarwood",
+      "Ambergris",
+      "Musk"
+    ],
+    "intensity": 3,
+    "longevity": 3,
+    "sweetness": 3,
+    "warmth": 3,
+    "season": "Spring",
+    "timeOfDay": "Day",
+    "gender": "Unisex",
+    "vibe": "Clean",
+    "complexity": "Linear",
+    "tier": "Niche",
+    "description": "A woody composition inspired by the soulful beauty of the Mojave Desert, featuring dry sandalwood.",
+    "image": "assets/images/woody.png"
+  },
+  {
+    "id": 73,
+    "brand": "DIERS",
+    "name": "Fahrenheit",
+    "scentFamily": "Woody",
+    "topNotes": [
+      "Nutmeg flower",
+      "Lavender",
+      "Cedar",
+      "Chamomile",
+      "Mandarin Orange"
+    ],
+    "middleNotes": [
+      "Violet Leaf",
+      "Nutmeg",
+      "Cedar",
+      "Sandalwood",
+      "Jasmine"
+    ],
+    "baseNotes": [
+      "Leather",
+      "Vetiver",
+      "Musk",
+      "Amber",
+      "Patchouli"
+    ],
+    "intensity": 4,
+    "longevity": 4,
+    "sweetness": 1,
+    "warmth": 4,
+    "season": "Winter",
+    "timeOfDay": "Night",
+    "gender": "Masculine",
+    "vibe": "Mysterious",
+    "complexity": "Evolving",
+    "tier": "Designer",
+    "description": "A classic legend. The famous 'gasoline' violet leaf, combined with heavy leather and cedar.",
+    "image": "assets/images/woody.png"
+  },
+  {
+    "id": 74,
+    "brand": "TOM FORD",
+    "name": "Bois Marocain",
+    "scentFamily": "Woody",
+    "topNotes": [
+      "Thuja wood",
+      "Incense"
+    ],
+    "middleNotes": [
+      "Patchouli",
+      "Pink Pepper",
+      "Cedarwood"
+    ],
+    "baseNotes": [
+      "Sandalwood",
+      "Vetiver"
+    ],
+    "intensity": 4,
+    "longevity": 4,
+    "sweetness": 1,
+    "warmth": 4,
+    "season": "Winter",
+    "timeOfDay": "Night",
+    "gender": "Unisex",
+    "vibe": "Sophisticated",
+    "complexity": "Linear",
+    "tier": "Niche",
+    "description": "Captures the dry, dark warmth of Moroccan thuja wood workshops, smelling like hot cedarwood resins.",
+    "image": "assets/images/woody.png"
+  },
+  {
+    "id": 75,
+    "brand": "L'ARTISAN PARFUMEUR",
+    "name": "Premier Figuier",
+    "scentFamily": "Woody",
+    "topNotes": [
+      "Fig Leaf",
+      "Asafoetida"
+    ],
+    "middleNotes": [
+      "Fig",
+      "Sandalwood",
+      "Almond Milk"
+    ],
+    "baseNotes": [
+      "Coconut",
+      "Sandalwood",
+      "Dried Fruits"
+    ],
+    "intensity": 2,
+    "longevity": 3,
+    "sweetness": 3,
+    "warmth": 2,
+    "season": "Summer",
+    "timeOfDay": "Day",
+    "gender": "Unisex",
+    "vibe": "Clean",
+    "complexity": "Evolving",
+    "tier": "Niche",
+    "description": "The world's first fig fragrance. Earthy fig leaves, creamy coconut milk, and dry sandalwood.",
+    "image": "assets/images/woody.png"
+  },
+  {
+    "id": 76,
+    "brand": "MAISON FRANCIS KURKDJIAN",
+    "name": "Baccarat Rouge 540",
+    "scentFamily": "Amber",
+    "topNotes": [
+      "Jasmine",
+      "Saffron"
+    ],
+    "middleNotes": [
+      "Amberwood",
+      "Ambergris"
+    ],
+    "baseNotes": [
+      "Fir Resin",
+      "Cedar"
+    ],
+    "intensity": 4,
+    "longevity": 5,
+    "sweetness": 4,
+    "warmth": 4,
+    "season": "Autumn",
+    "timeOfDay": "All",
+    "gender": "Unisex",
+    "vibe": "Sophisticated",
+    "complexity": "Evolving",
+    "tier": "Niche",
+    "description": "Luminous and sophisticated. Lays on the skin like an amber, floral and woody breeze.",
+    "image": "assets/images/amber.png"
+  },
+  {
+    "id": 77,
+    "brand": "YVES SAINT LAURENT",
+    "name": "Black Opium",
+    "scentFamily": "Amber",
+    "topNotes": [
+      "Pear",
+      "Pink Pepper",
+      "Orange Blossom"
+    ],
+    "middleNotes": [
+      "Coffee",
+      "Jasmine",
+      "Bitter Almond",
+      "Licorice"
+    ],
+    "baseNotes": [
+      "Vanilla",
+      "Patchouli",
+      "Cedar",
+      "Cashmere Wood"
+    ],
+    "intensity": 4,
+    "longevity": 4,
+    "sweetness": 5,
+    "warmth": 4,
+    "season": "Winter",
+    "timeOfDay": "Night",
+    "gender": "Feminine",
+    "vibe": "Mysterious",
+    "complexity": "Linear",
+    "tier": "Designer",
+    "description": "Highly addictive feminine fragrance. Fascinating and seductive with rich black coffee and vanilla.",
+    "image": "assets/images/amber.png"
+  },
+  {
+    "id": 78,
+    "brand": "TOM FORD",
+    "name": "Tobacco Vanille",
+    "scentFamily": "Amber",
+    "topNotes": [
+      "Tobacco Leaf",
+      "Spicy Notes"
+    ],
+    "middleNotes": [
+      "Vanilla",
+      "Cacao",
+      "Tonka Bean",
+      "Tobacco Blossom"
+    ],
+    "baseNotes": [
+      "Dried Fruits",
+      "Woody Notes"
+    ],
+    "intensity": 5,
+    "longevity": 5,
+    "sweetness": 4,
+    "warmth": 5,
+    "season": "Winter",
+    "timeOfDay": "Night",
+    "gender": "Unisex",
+    "vibe": "Cozy",
+    "complexity": "Evolving",
+    "tier": "Niche",
+    "description": "Tom Ford reinvents classic tobacco with sweet vanilla, cocoa, dry fruit, and sweet wood sap.",
+    "image": "assets/images/amber.png"
+  },
+  {
+    "id": 79,
+    "brand": "KILIAN",
+    "name": "Angels' Share",
+    "scentFamily": "Amber",
+    "topNotes": [
+      "Cognac"
+    ],
+    "middleNotes": [
+      "Cinnamon",
+      "Tonka Bean",
+      "Oak"
+    ],
+    "baseNotes": [
+      "Praline",
+      "Vanilla",
+      "Sandalwood"
+    ],
+    "intensity": 4,
+    "longevity": 5,
+    "sweetness": 5,
+    "warmth": 5,
+    "season": "Winter",
+    "timeOfDay": "Night",
+    "gender": "Unisex",
+    "vibe": "Cozy",
+    "complexity": "Evolving",
+    "tier": "Niche",
+    "description": "Inspired by the family heritage of cognac-makers. Rich cognac oil, cinnamon bark, and oak barrels.",
+    "image": "assets/images/amber.png"
+  },
+  {
+    "id": 80,
+    "brand": "GUERLAIN",
+    "name": "Shalimar",
+    "scentFamily": "Amber",
+    "topNotes": [
+      "Citrus Notes",
+      "Bergamot",
+      "Lemon",
+      "Cedar"
+    ],
+    "middleNotes": [
+      "Iris",
+      "Jasmine",
+      "Rose",
+      "Patchouli",
+      "Vetiver"
+    ],
+    "baseNotes": [
+      "Vanilla",
+      "Incense",
+      "Leather",
+      "Opoponax",
+      "Civet",
+      "Sandalwood"
+    ],
+    "intensity": 5,
+    "longevity": 4,
+    "sweetness": 3,
+    "warmth": 4,
+    "season": "Winter",
+    "timeOfDay": "Night",
+    "gender": "Feminine",
+    "vibe": "Sophisticated",
+    "complexity": "Evolving",
+    "tier": "Designer",
+    "description": "The world's first oriental fragrance. Inspired by the love story between an emperor and a princess.",
+    "image": "assets/images/amber.png"
+  },
+  {
+    "id": 81,
+    "brand": "TOM FORD",
+    "name": "Black Orchid",
+    "scentFamily": "Amber",
+    "topNotes": [
+      "Truffle",
+      "Gardenia",
+      "Blackcurrant",
+      "Ylang-Ylang",
+      "Bergamot"
+    ],
+    "middleNotes": [
+      "Orchid",
+      "Spices",
+      "Fruity Notes",
+      "Lotus"
+    ],
+    "baseNotes": [
+      "Mexican Chocolate",
+      "Patchouli",
+      "Vanila",
+      "Incense",
+      "Amber",
+      "Sandalwood"
+    ],
+    "intensity": 5,
+    "longevity": 5,
+    "sweetness": 4,
+    "warmth": 4,
+    "season": "Winter",
+    "timeOfDay": "Night",
+    "gender": "Unisex",
+    "vibe": "Mysterious",
+    "complexity": "Evolving",
+    "tier": "Niche",
+    "description": "A dark, dramatic blend of black orchids, hot spices, and sweet Mexican chocolate.",
+    "image": "assets/images/amber.png"
+  },
+  {
+    "id": 82,
+    "brand": "MAISON MARGIELA",
+    "name": "Replica By the Fireplace",
+    "scentFamily": "Amber",
+    "topNotes": [
+      "Cloves",
+      "Pink Pepper",
+      "Orange Blossom"
+    ],
+    "middleNotes": [
+      "Chestnut",
+      "Guaiac Wood",
+      "Juniper"
+    ],
+    "baseNotes": [
+      "Vanilla",
+      "Cashmeran",
+      "Peru Balsam"
+    ],
+    "intensity": 4,
+    "longevity": 4,
+    "sweetness": 4,
+    "warmth": 5,
+    "season": "Winter",
+    "timeOfDay": "Night",
+    "gender": "Unisex",
+    "vibe": "Cozy",
+    "complexity": "Linear",
+    "tier": "Niche",
+    "description": "Recreates the cozy warmth of a crackling fire. Roasted chestnuts, smoky wood, and sweet vanilla.",
+    "image": "assets/images/amber.png"
+  },
+  {
+    "id": 83,
+    "brand": "VIKTOR & ROLF",
+    "name": "Spicebomb",
+    "scentFamily": "Amber",
+    "topNotes": [
+      "Pink Pepper",
+      "Elemi",
+      "Bergamot",
+      "Grapefruit"
+    ],
+    "middleNotes": [
+      "Cinnamon",
+      "Saffron",
+      "Paprika"
+    ],
+    "baseNotes": [
+      "Tobacco",
+      "Leather",
+      "Vetiver"
+    ],
+    "intensity": 4,
+    "longevity": 4,
+    "sweetness": 3,
+    "warmth": 5,
+    "season": "Winter",
+    "timeOfDay": "Night",
+    "gender": "Masculine",
+    "vibe": "Adventurous",
+    "complexity": "Linear",
+    "tier": "Designer",
+    "description": "An explosion of spices. Tension between icy hot peppers and addictive, dry tobacco.",
+    "image": "assets/images/amber.png"
+  },
+  {
+    "id": 84,
+    "brand": "PARFUMS DE MARLY",
+    "name": "Layton",
+    "scentFamily": "Amber",
+    "topNotes": [
+      "Apple",
+      "Lavender",
+      "Bergamot",
+      "Mandarin Orange"
+    ],
+    "middleNotes": [
+      "Geranium",
+      "Violet",
+      "Jasmine"
+    ],
+    "baseNotes": [
+      "Vanilla",
+      "Cardamom",
+      "Sandalwood",
+      "Pepper",
+      "Patchouli"
+    ],
+    "intensity": 4,
+    "longevity": 5,
+    "sweetness": 4,
+    "warmth": 4,
+    "season": "Winter",
+    "timeOfDay": "Night",
+    "gender": "Masculine",
+    "vibe": "Sophisticated",
+    "complexity": "Evolving",
+    "tier": "Niche",
+    "description": "A noble, gourmand amber, matching fresh lavender and apple top notes with rich vanilla and cardamom.",
+    "image": "assets/images/amber.png"
+  },
+  {
+    "id": 85,
+    "brand": "DIOR",
+    "name": "Bois d'Argent",
+    "scentFamily": "Amber",
+    "topNotes": [
+      "Juniper Berries",
+      "Cypress",
+      "Yemen Frankincense"
+    ],
+    "middleNotes": [
+      "Iris",
+      "Myrrh",
+      "Patchouli"
+    ],
+    "baseNotes": [
+      "Honey",
+      "Vanilla",
+      "Amber",
+      "Leather",
+      "Woody Notes"
+    ],
+    "intensity": 3,
+    "longevity": 4,
+    "sweetness": 3,
+    "warmth": 3,
+    "season": "Fall",
+    "timeOfDay": "All",
+    "gender": "Unisex",
+    "vibe": "Sophisticated",
+    "complexity": "Evolving",
+    "tier": "Niche",
+    "description": "A private legend. Creamy powdery iris, wrapped in sweet honey, leather, and cypress wood.",
+    "image": "assets/images/amber.png"
+  },
+  {
+    "id": 86,
+    "brand": "MAISON FRANCIS KURKDJIAN",
+    "name": "Grand Soir",
+    "scentFamily": "Amber",
+    "topNotes": [
+      "Spanish Labdanum"
+    ],
+    "middleNotes": [
+      "Siam Benzoin"
+    ],
+    "baseNotes": [
+      "Amber",
+      "Vanilla",
+      "Tonka Bean"
+    ],
+    "intensity": 4,
+    "longevity": 5,
+    "sweetness": 4,
+    "warmth": 5,
+    "season": "Winter",
+    "timeOfDay": "Night",
+    "gender": "Unisex",
+    "vibe": "Sophisticated",
+    "complexity": "Linear",
+    "tier": "Niche",
+    "description": "Dressing up for a Paris night. An absolute warm amber vanilla wrapped in smoky resins.",
+    "image": "assets/images/amber.png"
+  },
+  {
+    "id": 87,
+    "brand": "SERGE LUTENS",
+    "name": "Ambre Sultan",
+    "scentFamily": "Amber",
+    "topNotes": [
+      "Coriander",
+      "Oregano",
+      "Bay Leaf"
+    ],
+    "middleNotes": [
+      "Amber",
+      "Myrrh",
+      "Angelica Root"
+    ],
+    "baseNotes": [
+      "Benzoin",
+      "Vanilla",
+      "Sandalwood",
+      "Patchouli"
+    ],
+    "intensity": 5,
+    "longevity": 4,
+    "sweetness": 2,
+    "warmth": 5,
+    "season": "Winter",
+    "timeOfDay": "Night",
+    "gender": "Unisex",
+    "vibe": "Mysterious",
+    "complexity": "Evolving",
+    "tier": "Niche",
+    "description": "An absolute reference for amber. A thick, herbal oregano opening turning into deep, resinous benzoin.",
+    "image": "assets/images/amber.png"
+  },
+  {
+    "id": 88,
+    "brand": "FREDERIC MALLE",
+    "name": "Musc Ravageur",
+    "scentFamily": "Amber",
+    "topNotes": [
+      "Lavender",
+      "Tangerine",
+      "Bergamot"
+    ],
+    "middleNotes": [
+      "Cinnamon",
+      "Cloves"
+    ],
+    "baseNotes": [
+      "Musk",
+      "Vanilla",
+      "Tonka Bean",
+      "Amber",
+      "Sandalwood",
+      "Guaiac Wood"
+    ],
+    "intensity": 4,
+    "longevity": 5,
+    "sweetness": 3,
+    "warmth": 5,
+    "season": "Winter",
+    "timeOfDay": "Night",
+    "gender": "Unisex",
+    "vibe": "Mysterious",
+    "complexity": "Evolving",
+    "tier": "Niche",
+    "description": "A sensual, animalic amber musk, spiced with cinnamon bark, cloves and dark woody base notes.",
+    "image": "assets/images/amber.png"
+  },
+  {
+    "id": 89,
+    "brand": "MAISON MARGIELA",
+    "name": "Replica Jazz Club",
+    "scentFamily": "Amber",
+    "topNotes": [
+      "Pink Pepper",
+      "Neroli",
+      "Lemon"
+    ],
+    "middleNotes": [
+      "Rum",
+      "Java Vetiver Oil",
+      "Clary Sage"
+    ],
+    "baseNotes": [
+      "Tobacco Leaf",
+      "Vanilla Bean",
+      "Styrax"
+    ],
+    "intensity": 4,
+    "longevity": 4,
+    "sweetness": 4,
+    "warmth": 4,
+    "season": "Winter",
+    "timeOfDay": "Night",
+    "gender": "Masculine",
+    "vibe": "Cozy",
+    "complexity": "Linear",
+    "tier": "Niche",
+    "description": "Recreates the ambiance of a Brooklyn jazz club. Rum cocktails, leather armchairs and sweet tobacco smoke.",
+    "image": "assets/images/amber.png"
+  },
+  {
+    "id": 90,
+    "brand": "TOM FORD",
+    "name": "Noir Extreme",
+    "scentFamily": "Amber",
+    "topNotes": [
+      "Cardamom",
+      "Nutmeg",
+      "Saffron",
+      "Mandarin Orange",
+      "Neroli"
+    ],
+    "middleNotes": [
+      "Kulfi",
+      "Rose",
+      "Mastic",
+      "Jasmine",
+      "Orange Blossom"
+    ],
+    "baseNotes": [
+      "Vanilla",
+      "Amber",
+      "Woody Notes",
+      "Sandalwood"
+    ],
+    "intensity": 3,
+    "longevity": 4,
+    "sweetness": 4,
+    "warmth": 4,
+    "season": "Winter",
+    "timeOfDay": "Night",
+    "gender": "Masculine",
+    "vibe": "Sophisticated",
+    "complexity": "Linear",
+    "tier": "Niche",
+    "description": "A spiced amber gourmand featuring Indian Kulfi dessert notes, saffron, cardamom, and warm vanilla.",
+    "image": "assets/images/amber.png"
+  },
+  {
+    "id": 91,
+    "brand": "BYREDO",
+    "name": "Velvet Haze",
+    "scentFamily": "Amber",
+    "topNotes": [
+      "Coconut Water",
+      "Hibiscus",
+      "Frangipani"
+    ],
+    "middleNotes": [
+      "Patchouli",
+      "Cacao Shell"
+    ],
+    "baseNotes": [
+      "Wild Musk",
+      "Ambrette Seeds"
+    ],
+    "intensity": 3,
+    "longevity": 4,
+    "sweetness": 3,
+    "warmth": 3,
+    "season": "Fall",
+    "timeOfDay": "All",
+    "gender": "Unisex",
+    "vibe": "Mysterious",
+    "complexity": "Evolving",
+    "tier": "Niche",
+    "description": "A sweet patchouli haze, layered with coconut water, raw cacao shells, and wild musk.",
+    "image": "assets/images/amber.png"
+  },
+  {
+    "id": 92,
+    "brand": "PENHALIGON'S",
+    "name": "Halfeti",
+    "scentFamily": "Amber",
+    "topNotes": [
+      "Cypress",
+      "Saffron",
+      "Cardamom",
+      "Artemisia",
+      "Grapefruit"
+    ],
+    "middleNotes": [
+      "Bulgarian Rose",
+      "Nutmeg",
+      "Jasmine"
+    ],
+    "baseNotes": [
+      "Agarwood (Oud)",
+      "Leather",
+      "Cedar",
+      "Sandalwood",
+      "Amber",
+      "Tonka Bean",
+      "Vanilla"
+    ],
+    "intensity": 5,
+    "longevity": 5,
+    "sweetness": 2,
+    "warmth": 5,
+    "season": "Winter",
+    "timeOfDay": "Night",
+    "gender": "Unisex",
+    "vibe": "Sophisticated",
+    "complexity": "Evolving",
+    "tier": "Niche",
+    "description": "Inspired by the black roses of Turkey. A heavy, spiced rose blended with dry leather, saffron, and oud.",
+    "image": "assets/images/amber.png"
+  },
+  {
+    "id": 93,
+    "brand": "YVES SAINT LAURENT",
+    "name": "Tuxedo",
+    "scentFamily": "Amber",
+    "topNotes": [
+      "Violet Leaf",
+      "Coriander",
+      "Bergamot"
+    ],
+    "middleNotes": [
+      "Rose",
+      "Black Pepper",
+      "Lily-of-the-Valley"
+    ],
+    "baseNotes": [
+      "Patchouli",
+      "Ambergris",
+      "Bourbon Vanilla"
+    ],
+    "intensity": 4,
+    "longevity": 4,
+    "sweetness": 3,
+    "warmth": 4,
+    "season": "Fall",
+    "timeOfDay": "Night",
+    "gender": "Unisex",
+    "vibe": "Sophisticated",
+    "complexity": "Evolving",
+    "tier": "Niche",
+    "description": "A structured scent matching violet leaf greenness with dark patchouli, ambergris and bourbon vanilla.",
+    "image": "assets/images/amber.png"
+  },
+  {
+    "id": 94,
+    "brand": "PARFUMS DE MARLY",
+    "name": "Herod",
+    "scentFamily": "Amber",
+    "topNotes": [
+      "Cinnamon",
+      "Pepperwood"
+    ],
+    "middleNotes": [
+      "Tobacco Leaf",
+      "Incense",
+      "Osmanthus",
+      "Labdanum"
+    ],
+    "baseNotes": [
+      "Vanilla",
+      "Iso E Super",
+      "Musk",
+      "Cedar",
+      "Cypriol"
+    ],
+    "intensity": 4,
+    "longevity": 4,
+    "sweetness": 4,
+    "warmth": 5,
+    "season": "Winter",
+    "timeOfDay": "Night",
+    "gender": "Masculine",
+    "vibe": "Cozy",
+    "complexity": "Evolving",
+    "tier": "Niche",
+    "description": "An absolute vanilla-tobacco pipe luxury. Warm, rich, sweet, and comforting wood resins.",
+    "image": "assets/images/amber.png"
+  },
+  {
+    "id": 95,
+    "brand": "HERMES",
+    "name": "Ambre Narguile",
+    "scentFamily": "Amber",
+    "topNotes": [
+      "Honey",
+      "Cinnamon",
+      "Rum"
+    ],
+    "middleNotes": [
+      "Sesame",
+      "Caramel",
+      "Tonka Bean"
+    ],
+    "baseNotes": [
+      "Vanilla",
+      "Benzoin",
+      "Tobacco",
+      "Orchid"
+    ],
+    "intensity": 4,
+    "longevity": 4,
+    "sweetness": 5,
+    "warmth": 5,
+    "season": "Winter",
+    "timeOfDay": "Night",
+    "gender": "Unisex",
+    "vibe": "Cozy",
+    "complexity": "Evolving",
+    "tier": "Niche",
+    "description": "An warm apple pie, honey, hot cinnamon bark, caramel and tobacco. Addictive and luxurious.",
+    "image": "assets/images/amber.png"
+  },
+  {
+    "id": 96,
+    "brand": "L'ARTISAN PARFUMEUR",
+    "name": "Noir Exquis",
+    "scentFamily": "Amber",
+    "topNotes": [
+      "Chestnut",
+      "Orange"
+    ],
+    "middleNotes": [
+      "Maple sap",
+      "Coffee",
+      "Orange Blossom"
+    ],
+    "baseNotes": [
+      "Vanilla",
+      "Ebony Wood",
+      "Tonka Bean",
+      "Heliotrope",
+      "Sandalwood"
+    ],
+    "intensity": 3,
+    "longevity": 4,
+    "sweetness": 4,
+    "warmth": 4,
+    "season": "Winter",
+    "timeOfDay": "Night",
+    "gender": "Unisex",
+    "vibe": "Cozy",
+    "complexity": "Linear",
+    "tier": "Niche",
+    "description": "A French patisserie rendezvous. Warm roasted chestnuts, maple wood sap, coffee, and rich vanilla.",
+    "image": "assets/images/amber.png"
+  },
+  {
+    "id": 97,
+    "brand": "JO MALONE",
+    "name": "Myrrh & Tonka Intense",
+    "scentFamily": "Amber",
+    "topNotes": [
+      "Lavender"
+    ],
+    "middleNotes": [
+      "Omumbiri Myrrh"
+    ],
+    "baseNotes": [
+      "Tonka Bean",
+      "Vanilla",
+      "Almond"
+    ],
+    "intensity": 4,
+    "longevity": 4,
+    "sweetness": 4,
+    "warmth": 4,
+    "season": "Winter",
+    "timeOfDay": "Night",
+    "gender": "Unisex",
+    "vibe": "Cozy",
+    "complexity": "Linear",
+    "tier": "Niche",
+    "description": "The noble myrrh resin from Namibia, combined with sweet, almondy vanilla and toasted tonka bean.",
+    "image": "assets/images/amber.png"
+  },
+  {
+    "id": 98,
+    "brand": "CREED",
+    "name": "Sublime Vanille",
+    "scentFamily": "Amber",
+    "topNotes": [
+      "Vanila",
+      "Vanilla Orchid"
+    ],
+    "middleNotes": [
+      "Tonka Bean"
+    ],
+    "baseNotes": [
+      "Bergamot",
+      "Lemon",
+      "Musk"
+    ],
+    "intensity": 3,
+    "longevity": 3,
+    "sweetness": 4,
+    "warmth": 3,
+    "season": "Winter",
+    "timeOfDay": "Day",
+    "gender": "Unisex",
+    "vibe": "Sophisticated",
+    "complexity": "Linear",
+    "tier": "Niche",
+    "description": "An airy, elegant vanilla, balanced by clean musk and bright Italian bergamot.",
+    "image": "assets/images/amber.png"
+  },
+  {
+    "id": 99,
+    "brand": "GIVENCHY",
+    "name": "Pi",
+    "scentFamily": "Amber",
+    "topNotes": [
+      "Mandarin Orange",
+      "Tarragon",
+      "Rosemary",
+      "Basil"
+    ],
+    "middleNotes": [
+      "Anise",
+      "Neroli",
+      "Geranium",
+      "Lily-of-the-Valley"
+    ],
+    "baseNotes": [
+      "Vanilla",
+      "Almond",
+      "Tonka Bean",
+      "Cedar",
+      "Benzoin"
+    ],
+    "intensity": 4,
+    "longevity": 4,
+    "sweetness": 4,
+    "warmth": 4,
+    "season": "Winter",
+    "timeOfDay": "Night",
+    "gender": "Masculine",
+    "vibe": "Cozy",
+    "complexity": "Evolving",
+    "tier": "Designer",
+    "description": "An absolute classic vanilla-almond benchmark, designed for bold explorers.",
+    "image": "assets/images/amber.png"
+  },
+  {
+    "id": 100,
+    "brand": "TOM FORD",
+    "name": "Lost Cherry",
+    "scentFamily": "Amber",
+    "topNotes": [
+      "Bitter Almond",
+      "Black Cherry",
+      "Cherry Liqueur"
+    ],
+    "middleNotes": [
+      "Sour Cherry",
+      "Plum",
+      "Turkish Rose",
+      "Jasmine Sambac"
+    ],
+    "baseNotes": [
+      "Tonka Bean",
+      "Vanilla",
+      "Cinnamon",
+      "Benzoin",
+      "Sandalwood",
+      "Patchouli",
+      "Cedar",
+      "Cloves"
+    ],
+    "intensity": 4,
+    "longevity": 3,
+    "sweetness": 5,
+    "warmth": 4,
+    "season": "Winter",
+    "timeOfDay": "Night",
+    "gender": "Unisex",
+    "vibe": "Mysterious",
+    "complexity": "Evolving",
+    "tier": "Niche",
+    "description": "A full-bodied journey into the once-forbidden; a contrast of sweet cherry liqueur and bitter almond.",
+    "image": "assets/images/amber.png"
+  }
+]

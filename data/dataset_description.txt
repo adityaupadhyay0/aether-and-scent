@@ -1,0 +1,67 @@
+-GATE CSE Question Classification Dataset
+
+--Overview
+
+This dataset contains 2,400 past GATE Computer Science (CSE) examination questions categorized into 8 key topics. 300 questions in each topic. It is designed for Natural Language Processing (NLP) tasks such as question classification, text analysis, and topic modeling.
+The dataset can be used to train machine learning models to classify unseen GATE questions into their respective topics, perform exploratory data analysis (EDA), or develop automated learning tools.
+
+--Dataset Details
+
+   -Total Questions: 2,400
+   -Number of Categories: 8
+   -File Format: CSV (Comma-Separated Values)
+
+--Categories Included
+  1. Computer Networks
+  2. Operating Systems
+  3. Mathematics
+  4. General Aptitude
+  5. Programming & Data Structures
+  6. Computer Organization & Architecture
+  7. Digital Logic
+  8. Theory of Computation
+
+--Column Descriptions
+-------------------------------------------------------------------------
+Column      |   Description |    Example
+--------------------------------------------------------------------------
+Topic       |The subject category of the question | "Computer Networks"
+--------------------------------------------------------------------------
+Question    |The actual question text, without options | "What is the purpose of the OSI model in networking?"
+------------------------------------------------------------------------------------------
+
+--Example Usage
+
+Here are some ways you can use this dataset:
+
+  -Training a Machine Learning Classifier
+  -Use the dataset to train an NLP model to automatically classify GATE questions.
+  -Exploratory Data Analysis (EDA): Perform word frequency analysis, topic distribution    visualization, or keyword extraction.
+  -Educational Tools & Exam Preparation: Develop personalized mock test generators or GATE exam preparation apps.
+  -Text-Based Recommendation Systems: Build smart tutoring systems that suggest topic-wise study materials based on question patterns.
+
+--License
+
+This dataset is released under the CC0: Public Domain License.
+  -Free to use, share, and modify for any purpose.
+  -No attribution required, but credit is appreciated.
+
+--Citation
+
+If you use this dataset in your research or project, please cite:
+
+Sahu, S. (2025): GATE CSE Question Classification Dataset. Retrieved from [Kaggle URL].
+
+--File Structure
+
+  -data.csv – The dataset file containing 2,400 rows with Topic and Question columns.
+  -README.md – This documentation file with dataset details and usage instructions.
+
+--Contact & Contributions
+
+For questions, feedback, or contributions, reach out at:
+
+Email: sakshisahu0920@gmail.com
+GitHub: https://github.com/sakshisahu789
+
+Start exploring the dataset and build amazing NLP models!

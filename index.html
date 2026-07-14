@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aether & Scent | Private Scent Consultation</title>
+  <meta name="description" content="Discover your signature perfume through our interactive 12-question scent consultation, visualized in an immersive 3D space.">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles.css?v=2.0.0">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- 3D Canvas Container -->
+  <div id="canvas-container"></div>
+  
+  <!-- Subtle Vignette Overlay for Visual Depth -->
+  <div class="vignette-overlay"></div>
+
+  <!-- Loading Screen -->
+  <div id="loader">
+    <div class="loader-content">
+      <h1 class="brand-title-large animate-fade">AETHER & SCENT</h1>
+      <p class="brand-subtitle">Curating Your Olfactory Signature...</p>
+      <div class="loader-bar-container">
+        <div class="loader-bar" id="loader-progress"></div>
+      </div>
+      <p class="loader-text">Loading Fragrance Universe...</p>
+    </div>
+  </div>
+
+  <!-- Main UI Wrapper -->
+  <div id="ui-container">
+    
+    <!-- Central Header Branding -->
+    <header class="boutique-header">
+      <div class="brand-logo">AETHER & SCENT</div>
+      <div class="brand-tagline">Olfactory Matcher</div>
+    </header>
+
+    <!-- Fixed Bottom-Left: Shopping Bag Button -->
+    <button class="cart-btn-fixed" id="btn-open-cart" title="Open Collection Drawer">
+      <i data-lucide="shopping-bag"></i>
+      <span class="cart-count" id="cart-count">0</span>
+    </button>
+
+    <!-- Floating Top Right Controls -->
+    <div class="floating-controls-top">
+      <div class="layout-toggle-wrapper">
+        <button class="layout-btn active" id="btn-layout-sphere">Spherical Orbit</button>
+        <span class="divider">/</span>
+        <button class="layout-btn" id="btn-layout-grid">Linear Gallery</button>
+      </div>
+      <button class="text-link-btn" id="btn-global-reset" style="display: none;">Reset Consultation</button>
+    </div>
+
+    <!-- Floating Bottom Center Scent Consultation Trigger -->
+    <button class="btn btn-luxury-solid btn-consultation-trigger" id="btn-open-consultation">
+      Start Scent Consultation
+    </button>
+
+    <!-- Center Consultation Steps Overlay -->
+    <div class="centered-overlay" id="panel-quiz">
+      <div class="overlay-card">
+        <!-- Close button to return to free navigation -->
+        <button class="quiz-close-btn" id="btn-close-quiz" title="Close and Explore">
+          <i data-lucide="x"></i>
+        </button>
+
+        <div class="quiz-progress-wrapper">
+          <div class="quiz-progress-text">
+            <span id="quiz-question-number">Step 1 of 5</span>
+          </div>
+          <div class="quiz-progress-bar-container">
+            <div class="quiz-progress-bar" id="quiz-progress-fill" style="width: 20%;"></div>
+          </div>
+        </div>
+
+        <!-- Question Container -->
+        <div class="question-container" id="question-card">
+          <!-- Active Question will be injected here dynamically -->
+        </div>
+
+        <!-- Quiz Navigation Footer -->
+        <div class="quiz-navigation">
+          <button class="btn-text-nav" id="btn-quiz-prev" disabled>
+            <i data-lucide="chevron-left"></i> Previous
+          </button>
+          <button class="btn-text-nav" id="btn-quiz-next" style="display: none;">
+            Next <i data-lucide="chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Center Reveal Overlay -->
+    <div class="centered-overlay" id="panel-reveal">
+      <div class="overlay-card text-center">
+        <h2 class="overlay-title">Olfactory Mapping Complete</h2>
+        <p class="overlay-text">
+          Your profile has been created. The floating perfume plaques have shifted: those matching your profile have floated forward, while mismatches have receded.
+        </p>
+        <button class="btn btn-luxury-solid" id="btn-view-matches">Explore Signature Matches</button>
+      </div>
+    </div>
+
+    <!-- Full-Screen Results Screen (shown after consultation) -->
+    <div id="results-screen" style="display:none;">
+      <div class="results-screen-header">
+        <h2 class="results-screen-title">Your Signature Matches</h2>
+        <p class="results-screen-subtitle">Curated exclusively for your olfactory profile. Click any fragrance to explore.</p>
+        <button class="text-link-btn" id="btn-results-reset">Start Over</button>
+      </div>
+      <div class="results-grid" id="results-grid">
+        <!-- Dynamically populated matched perfume cards -->
+      </div>
+    </div>
+
+    <!-- slide-out Product Drawer (Right side) -->
+    <div class="product-drawer" id="product-drawer">
+      <div class="drawer-content">
+        <button class="drawer-close-btn" id="btn-close-drawer">
+          <i data-lucide="x"></i>
+        </button>
+        
+        <div class="drawer-body">
+          <div class="drawer-image-section">
+            <img id="drawer-perfume-img" src="" alt="Perfume Bottle">
+            <div class="drawer-glow" id="drawer-glow-bg"></div>
+          </div>
+          
+          <div class="drawer-info-section">
+            <div class="drawer-brand" id="drawer-brand">BRAND</div>
+            <h2 class="drawer-title" id="drawer-name">Perfume Name</h2>
+            <div class="drawer-family" id="drawer-family">Woody</div>
+            
+            <p class="drawer-description" id="drawer-description">
+              Description...
+            </p>
+            
+            <!-- Olfactory Pyramid -->
+            <div class="olfactory-pyramid">
+              <h3>Olfactory Pyramid</h3>
+              <div class="pyramid-tier">
+                <span class="tier-label">TOP</span>
+                <div class="notes-list" id="drawer-top-notes">Notes</div>
+              </div>
+              <div class="pyramid-tier">
+                <span class="tier-label">HEART</span>
+                <div class="notes-list" id="drawer-middle-notes">Notes</div>
+              </div>
+              <div class="pyramid-tier">
+                <span class="tier-label">BASE</span>
+                <div class="notes-list" id="drawer-base-notes">Notes</div>
+              </div>
+            </div>
+            
+            <!-- Scent Profile -->
+            <div class="scent-profile-metrics">
+              <h3>Scent Profile</h3>
+              <div class="metric-row">
+                <span class="metric-label">Intensity</span>
+                <div class="metric-bar-wrapper">
+                  <div class="metric-bar-fill" id="drawer-metric-intensity-fill"></div>
+                </div>
+              </div>
+              <div class="metric-row">
+                <span class="metric-label">Longevity</span>
+                <div class="metric-bar-wrapper">
+                  <div class="metric-bar-fill" id="drawer-metric-longevity-fill"></div>
+                </div>
+              </div>
+              <div class="metric-row">
+                <span class="metric-label">Warmth</span>
+                <div class="metric-bar-wrapper">
+                  <div class="metric-bar-fill" id="drawer-metric-warmth-fill"></div>
+                </div>
+              </div>
+            </div>
+            
+            <button class="btn btn-luxury-solid btn-add-bag" id="btn-add-to-bag">
+              Add to Bag — <span id="drawer-price">$240</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- slide-out Shopping Bag Drawer (Left side) -->
+    <div class="cart-drawer" id="cart-drawer">
+      <div class="drawer-content">
+        <button class="drawer-close-btn" id="btn-close-cart-drawer">
+          <i data-lucide="x"></i>
+        </button>
+        
+        <div class="drawer-body">
+          <h2 class="drawer-header-title">Your Vanity Collection</h2>
+          <p class="drawer-header-subtitle">Selected olfactory signatures</p>
+          
+          <div class="cart-items-container" id="cart-items-list">
+            <!-- Dynamically populated cart items -->
+            <div class="cart-empty-state">
+              <p>Your bag is empty.</p>
+              <p class="sub">Select a perfume to add to your collection.</p>
+            </div>
+          </div>
+          
+          <div class="cart-checkout-footer" id="cart-footer" style="display: none;">
+            <div class="cart-total-row">
+              <span>Total Value</span>
+              <span class="price" id="cart-total-price">$0</span>
+            </div>
+            <button class="btn btn-luxury-solid btn-checkout">
+              Acquire Collection
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CDN Script Imports -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/renderers/CSS3DRenderer.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/18.6.4/tween.umd.js"></script>
+  <!-- App JS -->
+  <script src="app.js?v=2.0.0"></script>
+</body>
+</html>
