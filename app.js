@@ -305,43 +305,7 @@ function initThreeJS() {
     _downX = e.clientX;
     _downY = e.clientY;
   });
-  document.addEventListener('mouseup', (e) => {
-    // Ignore if this was a drag (> 6px movement)
-    if (Math.hypot(e.clientX - _downX, e.clientY - _downY) > 6) return;
-    // Ignore clicks on UI elements (drawers, buttons, overlays)
-    if (e.target.closest('#product-drawer, #cart-drawer, .centered-overlay, .btn-consultation-trigger, .floating-controls-top, .cart-btn-fixed, #results-screen, #results-grid')) return;
-
-    let closestId = null;
-    let closestDist = Infinity;
-    const MAX_DIST = 150; // px — how close the cursor must be to a card center
-
-    cardObjects.forEach((object, index) => {
-      const perfume = fragrances[index];
-      // Skip cards that are explicitly disabled
-      if (object.element.style.pointerEvents === 'none') return;
-
-      // Compute the card's absolute world position (scene can be rotated)
-      const worldPos = object.position.clone().applyEuler(scene.rotation);
-
-      // Project world → Normalised Device Coordinates [-1, 1]
-      const ndc = worldPos.clone().project(camera);
-
-      // Discard anything behind the camera
-      if (ndc.z >= 1) return;
-
-      // Convert NDC to actual screen pixels
-      const sx = (ndc.x + 1) * 0.5 * window.innerWidth;
-      const sy = (-ndc.y + 1) * 0.5 * window.innerHeight;
-
-      const dist = Math.hypot(e.clientX - sx, e.clientY - sy);
-      if (dist < MAX_DIST && dist < closestDist) {
-        closestDist = dist;
-        closestId = perfume.id;
-      }
-    });
-
-    if (closestId !== null) inspectCard(closestId);
-  });
+  // Removed global mouseup handler; clicks are now handled directly on the CSS3DObject elements.
   
   controls = new THREE.OrbitControls(camera, renderer.domElement);
   controls.enableDamping = true;
@@ -430,7 +394,26 @@ function createPerfumeCards() {
     details.appendChild(name);
     details.appendChild(price);
     element.appendChild(details);
-    // No per-card click handler — handled globally on renderer.domElement below
+    
+    // Explicit pointer events to bypass OrbitControls interception
+    let _cardDownX = 0, _cardDownY = 0;
+    
+    element.addEventListener('pointerdown', (e) => {
+      _cardDownX = e.clientX;
+      _cardDownY = e.clientY;
+      // Stop OrbitControls from hijacking the pointer when clicking directly on a card
+      e.stopPropagation();
+    });
+    
+    element.addEventListener('pointerup', (e) => {
+      e.stopPropagation();
+      // Ensure this was a click, not a drag on the card itself
+      if (Math.hypot(e.clientX - _cardDownX, e.clientY - _cardDownY) < 6) {
+        if (element.style.pointerEvents !== 'none' && !element.classList.contains('faded')) {
+          inspectCard(perfume.id);
+        }
+      }
+    });
 
     const object = new THREE.CSS3DObject(element);
     
@@ -468,7 +451,9 @@ function calculateSphereLayout() {
     
     const tempObj = new THREE.Object3D();
     tempObj.position.copy(position);
-    tempObj.lookAt(0, 0, 0); // Face origin
+    // In CSS3D, the front face is +Z. lookAt makes -Z point to the target.
+    // To make the front face point to the origin, we make -Z point AWAY from the origin.
+    tempObj.lookAt(position.clone().multiplyScalar(2));
     
     sphereTargets.push({
       position: position,
@@ -645,6 +630,18 @@ function calculateCompatibility() {
       score = score * 0.05; // Mismatches drop almost to zero
     }
     
+    // Apply Active Search Filter (if user started consultation from a search)
+    const searchInputStr = document.getElementById('explore-search').value.toLowerCase().trim();
+    if (searchInputStr) {
+       const match = perfume.name.toLowerCase().includes(searchInputStr) || 
+                     perfume.brand.toLowerCase().includes(searchInputStr) || 
+                     perfume.family.toLowerCase().includes(searchInputStr) ||
+                     perfume.notes.some(n => n.toLowerCase().includes(searchInputStr));
+       if (!match) {
+         score = 0; // Exclude entirely if it doesn't match the search
+       }
+    }
+    
     compatibilityScores[perfume.id] = score;
   });
 }
@@ -681,13 +678,22 @@ function updateCardVisuals3D() {
           element.style.opacity = '1';
           element.style.pointerEvents = 'auto';
           
-          // Animate cards into a neat foreground semi-circular arc (shifted right by +150 to keep it visible next to sidebar)
+          // Animate cards into a neat foreground semi-circular arc
           const rank = top5Ids.indexOf(perfume.id);
           const angle = (rank - 2) * 0.35; // Horizontally spaced arc
           
-          const targetX = 150 + Math.sin(angle) * 320; 
+          const offsetX = window.innerWidth > 768 ? -250 : 0; // Camera shift
+          const targetZ = 200 - (Math.cos(angle) * 60); // Push back to z=200 so they aren't massive/overlapping
+          
+          // Perspective correct center: 
+          // The sphere is at x=0, z=0. The camera is at x=offsetX, z=950.
+          // To keep the cards visually centered over the sphere, we must scale the X offset by depth.
+          const depthRatio = (950 - targetZ) / 950;
+          const visualCenterX = offsetX + Math.abs(offsetX) * depthRatio;
+          
+          // Keep physical spread at 450 so cards fan out elegantly with slight overlap
+          const targetX = visualCenterX + Math.sin(angle) * 450; 
           const targetY = (rank % 2 === 0 ? 30 : -30); // Soft vertical wave offset
-          const targetZ = 380 - (Math.cos(angle) * 60);
           
           new TWEEN.Tween(object.position)
             .to({ x: targetX, y: targetY, z: targetZ }, 900)
@@ -1187,23 +1193,65 @@ function updateCartUI() {
 
 // --- Bind Interactive UI Event Listeners ---
 function bindUIEvents() {
+  
+  // Explore Search Logic
+  const searchInput = document.getElementById('explore-search');
+  const searchClearBtn = document.getElementById('search-clear-btn');
+  
+  function handleSearch() {
+    const q = searchInput.value.toLowerCase().trim();
+    if (q.length > 0) {
+      searchClearBtn.style.display = 'block';
+    } else {
+      searchClearBtn.style.display = 'none';
+    }
+    
+    // Check if consultation is active; if it is, search shouldn't override quiz highlights
+    if (document.getElementById('panel-quiz').classList.contains('active')) return;
+    
+    cardObjects.forEach((object, index) => {
+      const perfume = fragrances[index];
+      const match = !q || 
+                    perfume.name.toLowerCase().includes(q) || 
+                    perfume.brand.toLowerCase().includes(q) || 
+                    perfume.family.toLowerCase().includes(q) ||
+                    perfume.notes.some(n => n.toLowerCase().includes(q));
+      
+      if (match) {
+        object.element.classList.remove('faded');
+        object.element.style.pointerEvents = '';
+      } else {
+        object.element.classList.add('faded');
+        object.element.style.pointerEvents = 'none';
+      }
+    });
+  }
+
+  searchInput.addEventListener('input', handleSearch);
+  
+  searchClearBtn.addEventListener('click', () => {
+    searchInput.value = '';
+    handleSearch();
+  });
+
   // Start Consultation Trigger Button
   document.getElementById('btn-open-consultation').addEventListener('click', () => {
-    document.getElementById('btn-open-consultation').style.display = 'none';
+    document.querySelector('.explore-search-container').style.display = 'none';
     document.getElementById('panel-quiz').classList.add('active');
     
     // Save camera state for restoring
     preInspectCameraState.position.copy(camera.position);
     preInspectCameraState.target.copy(controls.target);
     
-    // Animate camera to perfect consultation focus
+    // Animate camera to accommodate the left sidebar
     controls.enabled = false;
+    const offsetX = window.innerWidth > 768 ? -250 : 0; // Shift camera left, scene moves right
     new TWEEN.Tween(camera.position)
-      .to({ x: 0, y: 0, z: 700 }, 1000)
+      .to({ x: offsetX, y: 0, z: 950 }, 1000)
       .easing(TWEEN.Easing.Cubic.Out)
       .start();
     new TWEEN.Tween(controls.target)
-      .to({ x: 0, y: 0, z: 0 }, 1000)
+      .to({ x: offsetX, y: 0, z: 0 }, 1000)
       .easing(TWEEN.Easing.Cubic.Out)
       .onComplete(() => {
         controls.enabled = true;
@@ -1221,10 +1269,18 @@ function bindUIEvents() {
   // Close Scent Consultation (Exit quiz back to orbit)
   document.getElementById('btn-close-quiz').addEventListener('click', () => {
     document.getElementById('panel-quiz').classList.remove('active');
-    document.getElementById('btn-open-consultation').style.display = 'block';
+    document.querySelector('.explore-search-container').style.display = 'flex';
+    
+    // Clear search on exit so the full explore view resets
+    searchInput.value = '';
+    searchClearBtn.style.display = 'none';
+    
     restoreCameraAfterInspection();
     calculateCompatibility();
     updateCardVisuals3D();
+    
+    // Re-apply any search filter (which is now empty)
+    handleSearch();
   });
 
   // Quiz Navigation
