@@ -404,7 +404,7 @@ html, body {
 .overlay-title {
   font-family: var(--font-serif);
   font-size: 1.5rem;
-  color: #1a1a1a;
+  color: #ffffff;
   letter-spacing: 0.05rem;
   font-weight: 400;
   margin-bottom: 20px;
@@ -486,7 +486,7 @@ html, body {
   font-family: var(--font-serif);
   font-size: 1.2rem;
   line-height: 1.45;
-  color: #1a1a1a;
+  color: #ffffff;
   margin-bottom: 25px;
   font-weight: 400;
   text-align: center;
@@ -499,33 +499,48 @@ html, body {
   gap: 5px;
 }
 
-.choice-btn {
+.visual-choice-card {
   width: 100%;
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  padding: 14px 5px;
-  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 16px 20px;
+  color: #ffffff;
   text-align: left;
-  font-size: 0.85rem;
-  font-weight: 400;
   cursor: pointer;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: var(--transition-smooth);
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  margin-bottom: 12px;
 }
 
-.choice-btn:hover {
-  border-bottom-color: rgba(0, 0, 0, 0.25);
-  color: #1a1a1a;
-  padding-left: 6px;
+.visual-choice-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(197, 168, 128, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.choice-btn.selected {
-  border-bottom-color: var(--accent-gold);
-  color: var(--accent-gold);
+.visual-choice-card.selected {
+  background: rgba(197, 168, 128, 0.15);
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 20px rgba(197, 168, 128, 0.2);
+}
+
+.visual-choice-card .choice-title {
+  font-size: 0.95rem;
   font-weight: 500;
+  margin-bottom: 4px;
+  color: #ffffff;
+  display: block;
+}
+
+.visual-choice-card .choice-description {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 300;
+  display: block;
 }
 
 /* Sliders */
@@ -705,6 +720,7 @@ html, body {
   user-select: none;
   pointer-events: auto; /* Required for CSS3DRenderer elements to be clickable */
   backface-visibility: visible;
+  will-change: transform;
   transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), 
               border-color 0.4s ease, 
               box-shadow 0.4s ease, 
@@ -834,21 +850,31 @@ html, body {
 .product-drawer {
   position: fixed;
   top: 0;
-  right: -480px; /* Hidden offscreen by default */
-  width: 460px;
-  max-width: 100%;
+  right: -520px;
+  width: 500px;
   height: 100%;
-  background: rgba(255, 255, 255, 0.85); /* Premium glassmorphism */
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-left: 1px solid rgba(197, 168, 128, 0.18);
-  z-index: 150;
-  transition: right 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: -10px 0 40px rgba(0, 0, 0, 0.05);
+  background: rgba(15, 15, 19, 0.95);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  transition: right 0.4s cubic-bezier(0.25, 1, 0.5, 1), bottom 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid rgba(197, 168, 128, 0.1);
 }
 
 .product-drawer.active {
   right: 0;
+}
+
+.drawer-drag-handle {
+  display: none; /* Only show on mobile */
+  width: 40px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+  margin: 10px auto 15px auto;
 }
 
 .drawer-content {
@@ -876,8 +902,9 @@ html, body {
 }
 
 .drawer-close-btn:hover {
-  color: #1a1a1a;
-  border-color: rgba(197, 168, 128, 0.5);
+  color: #ffffff;
+  border-color: rgba(197, 168, 128, 0.8);
+  background: rgba(197, 168, 128, 0.1);
 }
 
 .drawer-body {
@@ -890,12 +917,12 @@ html, body {
 
 .drawer-image-section {
   width: 100%;
-  height: 220px;
+  height: 400px;
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #faf9f6; /* Soft warm canvas for perfume */
-  border: 1px solid rgba(197, 168, 128, 0.08);
+  background: transparent; /* Clean transparent background for luxury feel */
   position: relative;
   overflow: hidden;
   margin-bottom: 25px;
@@ -903,7 +930,8 @@ html, body {
 }
 
 .drawer-image-section img {
-  height: 160px;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
   z-index: 2;
   filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.05));
@@ -935,11 +963,11 @@ html, body {
 
 .drawer-title {
   font-family: var(--font-serif);
-  font-size: 1.6rem;
-  color: #1a1a1a;
+  font-size: 1.8rem;
+  color: #ffffff;
   font-weight: 400;
   line-height: 1.2;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
 .drawer-family {
@@ -1152,29 +1180,7 @@ html, body {
   margin-top: 20px;
 }
 
-.visual-choice-card {
-  background: #ffffff;
-  border: 1px solid rgba(197, 168, 128, 0.1);
-  padding: 20px 15px;
-  text-align: center;
-  cursor: pointer;
-  transition: var(--transition-smooth);
-  position: relative;
-  overflow: hidden;
-}
-
-.visual-choice-card:hover {
-  border-color: var(--accent-gold);
-  background: rgba(250, 249, 246, 0.5);
-  transform: translateY(-2px);
-}
-
-.visual-choice-card.selected {
-  border-color: var(--accent-gold);
-  background: rgba(197, 168, 128, 0.04);
-  box-shadow: 0 4px 15px rgba(197, 168, 128, 0.08);
-}
-
+/* Removed duplicate visual-choice-card styles to preserve the dark glassmorphic theme defined above */
 .choice-icon-wrap {
   width: 40px;
   height: 40px;
@@ -1206,7 +1212,7 @@ html, body {
 .consultant-chat-bubble {
   font-size: 0.95rem;
   line-height: 1.5;
-  color: #1a1a1a;
+  color: #ffffff;
   font-family: var(--font-serif);
   border-left: 2px solid var(--accent-gold);
   padding-left: 15px;
@@ -1295,7 +1301,7 @@ input[type=range].luxury-slider::-webkit-slider-thumb:hover {
 .tier-label {
   width: 80px;
   font-weight: 500;
-  color: #1a1a1a;
+  color: rgba(255, 255, 255, 0.6);
   letter-spacing: 0.05rem;
 }
 
@@ -1428,7 +1434,58 @@ input[type=range].luxury-slider::-webkit-slider-thumb:hover {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+  .product-drawer, .cart-drawer {
+    width: 100%;
+    height: 85vh;
+    top: auto;
+    bottom: -100%;
+    right: 0;
+    border-left: none;
+    border-top: 1px solid rgba(197, 168, 128, 0.1);
+    border-radius: 24px 24px 0 0;
+  }
+  
+  .product-drawer.active, .cart-drawer.active {
+    bottom: 0;
+    right: 0;
+  }
+  
+  .drawer-drag-handle {
+    display: block;
+  }
+  
+  /* Make the Consultation Sidebar act like a bottom drawer */
+  .sidebar-wizard {
+    width: 100%;
+    max-width: 100vw;
+    height: auto;
+    max-height: 85vh;
+    top: auto;
+    bottom: 0;
+    transform: translateY(100%);
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    z-index: 100;
+  }
+  
+  .sidebar-wizard.active {
+    transform: translateY(0);
+  }
+  
+  .sidebar-wizard .overlay-card {
+    width: 100%;
+    max-width: 100vw;
+    height: auto;
+    border-radius: 24px 24px 0 0;
+    border: none;
+    border-top: 1px solid rgba(197, 168, 128, 0.2);
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.5);
+  }
+  
+  .centered-overlay .overlay-card {
+    width: 95%;
+  }
+
   .boutique-header {
     top: 20px;
   }
@@ -1531,7 +1588,8 @@ input[type=range].luxury-slider::-webkit-slider-thumb:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #f8f5f0;
+  background: #0a0a0f;
+
   z-index: 40;
   display: flex;
   flex-direction: column;
@@ -1547,16 +1605,16 @@ input[type=range].luxury-slider::-webkit-slider-thumb:hover {
 
 .results-screen-title {
   font-family: var(--font-serif);
-  font-size: 2rem;
-  color: #1a1a1a;
+  font-size: 2.2rem;
+  color: #ffffff;
   letter-spacing: 0.1rem;
   font-weight: 400;
   margin-bottom: 10px;
 }
 
 .results-screen-subtitle {
-  font-size: 0.85rem;
-  color: var(--text-secondary);
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.6);
   letter-spacing: 0.05rem;
   margin-bottom: 20px;
 }
@@ -1572,8 +1630,8 @@ input[type=range].luxury-slider::-webkit-slider-thumb:hover {
 
 /* Result card (2D static grid version) */
 .result-card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid var(--card-border);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -1618,7 +1676,7 @@ input[type=range].luxury-slider::-webkit-slider-thumb:hover {
 .result-card .rc-img-wrap {
   width: 100%;
   height: 200px;
-  background: #fff;
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1633,8 +1691,8 @@ input[type=range].luxury-slider::-webkit-slider-thumb:hover {
 
 .result-card .rc-info {
   padding: 14px 14px 16px;
-  background: #fff;
-  border-top: 1px solid rgba(0,0,0,0.04);
+  background: rgba(255, 255, 255, 0.03);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .result-card .rc-brand {
@@ -1647,13 +1705,9 @@ input[type=range].luxury-slider::-webkit-slider-thumb:hover {
 
 .result-card .rc-name {
   font-family: var(--font-serif);
-  font-size: 0.9rem;
-  color: #1a1a1a;
-  margin-top: 3px;
-  line-height: 1.25;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  font-size: 0.95rem;
+  color: #ffffff;
+  line-height: 1.2;
 }
 
 .result-card .rc-price {
@@ -1664,7 +1718,7 @@ input[type=range].luxury-slider::-webkit-slider-thumb:hover {
 }
 
 /* --- Mobile Responsiveness --- */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   /* Product Drawer slides up from bottom */
   .product-drawer {
     right: 0;
@@ -1683,18 +1737,13 @@ input[type=range].luxury-slider::-webkit-slider-thumb:hover {
     right: 0;
   }
   
-  /* Sidebar Wizard full width */
-  .sidebar-wizard {
-    width: 100%;
-    max-width: 100vw;
-  }
-  
   /* Search Container Responsiveness */
   .explore-search-container {
     width: 90%;
     flex-direction: column;
-    top: 70px;
-    gap: 10px;
+    top: auto;
+    bottom: 90px; /* Sit above the shopping bag */
+    gap: 15px;
   }
   .search-input-wrapper {
     width: 100%;

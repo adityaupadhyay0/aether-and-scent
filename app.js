@@ -34,199 +34,133 @@ let isConsultationComplete = false;
 const quizQuestions = [
   {
     id: "scentFamily",
-    text: "Welcome to Aether & Scent. Let us begin our olfactory map. Which sensory escape calls to your spirit most?",
+    text: "Welcome to the Kaggle-powered Aether & Scent Engine. Let's begin by selecting a primary scent family based on dominant accords:",
     type: "choice",
     options: [
-      { text: "A crisp ocean breeze with fresh citrus", value: "Fresh", desc: "Zesty, marine, clean, and energetic" },
-      { text: "A blooming rose garden after spring rain", value: "Floral", desc: "Romantic, delicate, sweet, and botanical" },
-      { text: "A walk in a deep, damp forest of moss & cedar", value: "Woody", desc: "Dry, sophisticated, warm, and grounded" },
-      { text: "An exotic spice market with warm vanilla", value: "Amber", desc: "Mysterious, sensual, rich, and enveloping" }
+      { text: "Fresh, Citrus, & Aquatic Accords", value: "Fresh", desc: "Zesty, marine, and uplifting profiles" },
+      { text: "Floral, Rose, & White Floral Accords", value: "Floral", desc: "Romantic, delicate, and blooming profiles" },
+      { text: "Woody, Earthy, & Leather Accords", value: "Woody", desc: "Dry, sophisticated, and grounded profiles" },
+      { text: "Amber, Warm Spicy, & Sweet Vanilla Accords", value: "Amber", desc: "Mysterious, rich, and exotic profiles" }
     ],
     scoreFn: (perfume, val) => (perfume.scentFamily === val ? 1.0 : 0.0)
+  },
+  {
+    id: "gender",
+    text: "How would you prefer the gender leaning of this fragrance?",
+    type: "choice",
+    options: [
+      { text: "Distinctly Masculine", value: "Masculine", desc: "Bold, traditional male profiles" },
+      { text: "Distinctly Feminine", value: "Feminine", desc: "Elegant, traditional female profiles" },
+      { text: "Perfectly Unisex", value: "Unisex", desc: "Shared, balanced for anyone" }
+    ],
+    scoreFn: (perfume, val) => {
+      if (perfume.gender === val) return 1.0;
+      if (perfume.gender === 'Unisex') return 0.7; // Unisex is a safe fallback
+      return 0.2; // Strong mismatch
+    }
   }
 ];
 
 const branches = {
   Fresh: [
     {
-      id: "freshType",
-      text: "An excellent choice. Freshness has many faces. Which aromatic profile speaks to your style?",
+      id: "freshAccord",
+      text: "Freshness has many faces. Which aromatic profile speaks to your style?",
       type: "choice",
       options: [
-        { text: "Zesty lemon, fresh bergamot, and clean herbs", value: "Citrus", desc: "Bright, sparking, and uplifting" },
-        { text: "Crisp ocean waves, sea salt, and marine breeze", value: "Marine", desc: "Aqueous, breezy, and cool" }
+        { text: "Zesty lemon and sparkling citruses", value: "citrus", desc: "Bright, sparking, and uplifting" },
+        { text: "Crisp ocean waves and aquatic breeze", value: "aquatic", desc: "Aqueous, breezy, and cool" }
       ],
       scoreFn: (perfume, val) => {
-        const allNotes = [...perfume.topNotes, ...perfume.middleNotes, ...perfume.baseNotes].map(n => n.toLowerCase());
-        if (val === "Marine") {
-          return allNotes.some(n => n.includes("sea") || n.includes("marine") || n.includes("ocean") || n.includes("salt") || n.includes("water")) ? 1.0 : 0.3;
-        }
-        return allNotes.some(n => n.includes("lemon") || n.includes("bergamot") || n.includes("mint") || n.includes("citrus") || n.includes("lime") || n.includes("orange")) ? 1.0 : 0.3;
+        // Checking the accords 1 to 5
+        const matches = perfume.accords.some(a => a.toLowerCase().includes(val) || a.toLowerCase().includes('marine'));
+        return matches ? 1.0 : 0.3;
       }
     },
     {
-      id: "intensity",
-      text: "How loud should this fresh breeze carry in a room?",
-      type: "slider",
-      labels: ["Subtle Whisper", "Conversational Trail", "Commanding Presence"],
-      min: 1, max: 5, defaultValue: 3,
-      scoreFn: (perfume, val) => 1 - Math.abs(perfume.intensity - parseInt(val)) / 4
-    },
-    {
-      id: "season",
-      text: "What climate does this escape fit best?",
+      id: "tier",
+      text: "Do you prefer widespread classics or exclusive artistry?",
       type: "choice",
       options: [
-        { text: "Bright sunshine & hot summer beaches", value: "Summer", desc: "Sunkissed skin & warm air" },
-        { text: "Cool spring mornings & mountain air", value: "Spring", desc: "Dewy leaves & fresh starts" }
+        { text: "Designer Classics", value: "Designer", desc: "Renowned luxury fashion houses" },
+        { text: "Niche Artistry", value: "Niche", desc: "Exclusive, avant-garde perfume houses" }
       ],
-      scoreFn: (perfume, val) => (perfume.season === val ? 1.0 : 0.4)
-    },
-    {
-      id: "vibe",
-      text: "Lastly, choose the attire for this signature:",
-      type: "choice",
-      options: [
-        { text: "Minimalist, clean, sporty & crisp white tees", value: "Clean", desc: "Pure, casual, and effortless" },
-        { text: "Timeless elegance & tailored classics", value: "Sophisticated", desc: "Sharp, refined, and confident" }
-      ],
-      scoreFn: (perfume, val) => (perfume.vibe === val ? 1.0 : 0.3)
+      scoreFn: (perfume, val) => (perfume.tier === val ? 1.0 : 0.5)
     }
   ],
   Floral: [
     {
-      id: "floralType",
+      id: "floralAccord",
       text: "Floral essences carry deep emotional range. What kind of blossom matches your aura?",
       type: "choice",
       options: [
-        { text: "Rich rose, sweet peony, and classic petals", value: "Rose", desc: "Romantic, timeless, and delicate" },
-        { text: "Sensual jasmine, tuberose, and white flowers", value: "Jasmine", desc: "Intense, mysterious, and opulent" }
+        { text: "Classic rose and elegant petals", value: "rose", desc: "Romantic, timeless, and delicate" },
+        { text: "Intense white florals like jasmine & tuberose", value: "white floral", desc: "Intense, mysterious, and opulent" }
       ],
       scoreFn: (perfume, val) => {
-        const allNotes = [...perfume.topNotes, ...perfume.middleNotes, ...perfume.baseNotes].map(n => n.toLowerCase());
-        if (val === "Rose") {
-          return allNotes.some(n => n.includes("rose") || n.includes("peony") || n.includes("freesia")) ? 1.0 : 0.3;
-        }
-        return allNotes.some(n => n.includes("jasmine") || n.includes("tuberose") || n.includes("neroli") || n.includes("blossom")) ? 1.0 : 0.3;
+        const matches = perfume.accords.some(a => a.toLowerCase().includes(val));
+        return matches ? 1.0 : 0.3;
       }
     },
     {
-      id: "longevity",
-      text: "How long do you need this floral aura to linger on you?",
-      type: "slider",
-      labels: ["A morning garden splash", "Standard workday length", "Eternal day-and-night aura"],
-      min: 1, max: 5, defaultValue: 3,
-      scoreFn: (perfume, val) => 1 - Math.abs(perfume.longevity - parseInt(val)) / 4
-    },
-    {
-      id: "vibe",
-      text: "Describe the vibe you wish to project:",
+      id: "tier",
+      text: "Do you prefer widespread classics or exclusive artistry?",
       type: "choice",
       options: [
-        { text: "Artistic, romantic, and soft pastel tones", value: "Romantic", desc: "Dreamy, warm, and gentle" },
-        { text: "Timeless elegance, suits, and designer chic", value: "Sophisticated", desc: "Modern, high-fashion, and polished" }
+        { text: "Designer Classics", value: "Designer", desc: "Renowned luxury fashion houses" },
+        { text: "Niche Artistry", value: "Niche", desc: "Exclusive, avant-garde perfume houses" }
       ],
-      scoreFn: (perfume, val) => (perfume.vibe === val ? 1.0 : 0.3)
-    },
-    {
-      id: "sweetness",
-      text: "How do you feel about honeyed or sugary sweetness?",
-      type: "slider",
-      labels: ["Completely dry/tart", "Delicate hint of sweet", "Rich, dessert-like gourmand"],
-      min: 1, max: 5, defaultValue: 3,
-      scoreFn: (perfume, val) => 1 - Math.abs(perfume.sweetness - parseInt(val)) / 4
+      scoreFn: (perfume, val) => (perfume.tier === val ? 1.0 : 0.5)
     }
   ],
   Woody: [
     {
-      id: "woodType",
+      id: "woodAccord",
       text: "A choice of profound substance. Which wood profile represents your character?",
       type: "choice",
       options: [
-        { text: "Creamy sandalwood & soft cedar shavings", value: "Sandalwood", desc: "Warm, smooth, and comforting" },
-        { text: "Dark, smoky oud & rich patchouli earth", value: "Oud", desc: "Intense, deep, and mysterious" }
+        { text: "Earthy, green, and mossy", value: "earthy", desc: "Fresh, damp, and grounded" },
+        { text: "Dark, smoky oud & rich woods", value: "woody", desc: "Intense, deep, and mysterious" }
       ],
       scoreFn: (perfume, val) => {
-        const allNotes = [...perfume.topNotes, ...perfume.middleNotes, ...perfume.baseNotes].map(n => n.toLowerCase());
-        if (val === "Sandalwood") {
-          return allNotes.some(n => n.includes("sandalwood") || n.includes("cedar") || n.includes("vetiver")) ? 1.0 : 0.3;
-        }
-        return allNotes.some(n => n.includes("oud") || n.includes("patchouli") || n.includes("agarwood") || n.includes("smok")) ? 1.0 : 0.3;
+        const matches = perfume.accords.some(a => a.toLowerCase().includes(val) || (val === 'woody' && a.toLowerCase().includes('oud')));
+        return matches ? 1.0 : 0.3;
       }
     },
     {
-      id: "intensity",
-      text: "How powerful should this woody sillage project?",
-      type: "slider",
-      labels: ["Quiet skin scent", "Distinct personal bubble", "Commanding boardroom trail"],
-      min: 1, max: 5, defaultValue: 3,
-      scoreFn: (perfume, val) => 1 - Math.abs(perfume.intensity - parseInt(val)) / 4
-    },
-    {
-      id: "season",
-      text: "Which seasonal climate feels most fitting?",
+      id: "tier",
+      text: "Do you prefer widespread classics or exclusive artistry?",
       type: "choice",
       options: [
-        { text: "Cool autumn breezes & woodsmoke", value: "Autumn", desc: "Crisp leaves & golden sunlight" },
-        { text: "Chilly winter frost & log fires", value: "Winter", desc: "Snowy evenings & heavy coats" }
+        { text: "Designer Classics", value: "Designer", desc: "Renowned luxury fashion houses" },
+        { text: "Niche Artistry", value: "Niche", desc: "Exclusive, avant-garde perfume houses" }
       ],
-      scoreFn: (perfume, val) => (perfume.season === val ? 1.0 : 0.4)
-    },
-    {
-      id: "vibe",
-      text: "And the aesthetic attire for this scent:",
-      type: "choice",
-      options: [
-        { text: "Timeless elegance & tailored lines", value: "Sophisticated", desc: "Classic, dignified, and elegant" },
-        { text: "Bold, rugged boots & outdoor adventure", value: "Adventurous", desc: "Earthy, masculine, and untamed" }
-      ],
-      scoreFn: (perfume, val) => (perfume.vibe === val ? 1.0 : 0.3)
+      scoreFn: (perfume, val) => (perfume.tier === val ? 1.0 : 0.5)
     }
   ],
   Amber: [
     {
-      id: "amberType",
+      id: "amberAccord",
       text: "Exotic and enveloping. Which facet of the East calls to you?",
       type: "choice",
       options: [
-        { text: "Warm vanilla, rich honey & sweet resins", value: "Sweet", desc: "Cozy, delicious, and inviting" },
-        { text: "Cardamom spice, dark leather & smoky incense", value: "Spicy", desc: "Bold, exotic, and magnetic" }
+        { text: "Warm vanilla & sweet resins", value: "vanilla", desc: "Cozy, delicious, and inviting" },
+        { text: "Warm spices & smoky incense", value: "warm spicy", desc: "Bold, exotic, and magnetic" }
       ],
       scoreFn: (perfume, val) => {
-        const allNotes = [...perfume.topNotes, ...perfume.middleNotes, ...perfume.baseNotes].map(n => n.toLowerCase());
-        if (val === "Sweet") {
-          return allNotes.some(n => n.includes("vanilla") || n.includes("honey") || n.includes("tonka") || n.includes("benzoin")) ? 1.0 : 0.3;
-        }
-        return allNotes.some(n => n.includes("cardamom") || n.includes("spice") || n.includes("pepper") || n.includes("incense") || n.includes("leather")) ? 1.0 : 0.3;
+        const matches = perfume.accords.some(a => a.toLowerCase().includes(val) || a.toLowerCase().includes('sweet'));
+        return matches ? 1.0 : 0.3;
       }
     },
     {
-      id: "warmth",
-      text: "Select the temperature of comfort you desire on your skin:",
-      type: "slider",
-      labels: ["Neutral/Balanced warmth", "Warm amber glow", "Intensely hot, spicy fireplace"],
-      min: 1, max: 5, defaultValue: 3,
-      scoreFn: (perfume, val) => 1 - Math.abs(perfume.warmth - parseInt(val)) / 4
-    },
-    {
-      id: "timeOfDay",
-      text: "When will you summon this mysterious signature?",
+      id: "tier",
+      text: "Do you prefer widespread classics or exclusive artistry?",
       type: "choice",
       options: [
-        { text: "Intimate dinners and late night outings", value: "Night", desc: "Seductive, mysterious, and dark" },
-        { text: "An all-day signature for any occasion", value: "All", desc: "Versatile, rich, and confident" }
+        { text: "Designer Classics", value: "Designer", desc: "Renowned luxury fashion houses" },
+        { text: "Niche Artistry", value: "Niche", desc: "Exclusive, avant-garde perfume houses" }
       ],
-      scoreFn: (perfume, val) => (perfume.timeOfDay === val ? 1.0 : 0.5)
-    },
-    {
-      id: "vibe",
-      text: "Select the vibe you wish to project:",
-      type: "choice",
-      options: [
-        { text: "Mysterious, dark, and avant-garde", value: "Mysterious", desc: "Seductive, intriguing, and deep" },
-        { text: "Cozy fireside, knitwear, and comfort", value: "Cozy", desc: "Warm, close, and affectionate" }
-      ],
-      scoreFn: (perfume, val) => (perfume.vibe === val ? 1.0 : 0.3)
+      scoreFn: (perfume, val) => (perfume.tier === val ? 1.0 : 0.5)
     }
   ]
 };
@@ -235,7 +169,7 @@ function getActiveQuestions() {
   if (!currentBranch) {
     return quizQuestions;
   }
-  return [quizQuestions[0], ...branches[currentBranch]];
+  return [...quizQuestions, ...branches[currentBranch]];
 }
 
 // --- Initializer & Setup ---
@@ -246,6 +180,10 @@ document.addEventListener('DOMContentLoaded', () => {
 async function initApp() {
   try {
     const progress = document.getElementById('loader-progress');
+    progress.style.width = '15%';
+    
+    // Apply weather theme
+    await applyWeatherBackground();
     progress.style.width = '30%';
     
     const response = await fetch('data/fragrances.json?v=' + Date.now());
@@ -317,10 +255,27 @@ function initThreeJS() {
   animateLoop();
 }
 
+let resizeTimeout;
 function onWindowResize() {
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
   renderer.setSize(window.innerWidth, window.innerHeight);
+  
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(() => {
+    // Recalculate positions for responsive design
+    sphereTargets = [];
+    gridTargets = [];
+    calculateSphereLayout();
+    calculateGridLayout();
+    
+    // Tween smoothly to new positions
+    if (activeLayout === 'sphere') {
+      transform(sphereTargets, 800);
+    } else if (activeLayout === 'grid') {
+      transform(gridTargets, 800);
+    }
+  }, 250);
 }
 
 function animateLoop() {
@@ -342,6 +297,44 @@ function animateLoop() {
   renderer.render(scene, camera);
 }
 
+// --- Background Gradient Helper ---
+function getAccordGradient(accords) {
+  const colorMap = {
+    'citrus': 'rgba(230, 216, 117, 0.1)', 
+    'fresh': 'rgba(163, 201, 183, 0.1)', 
+    'marine': 'rgba(99, 160, 179, 0.1)', 
+    'aquatic': 'rgba(99, 160, 179, 0.1)',
+    'floral': 'rgba(217, 158, 189, 0.1)', 
+    'rose': 'rgba(196, 90, 124, 0.1)', 
+    'white floral': 'rgba(232, 230, 223, 0.1)', 
+    'woody': 'rgba(133, 102, 81, 0.1)', 
+    'earthy': 'rgba(96, 110, 87, 0.1)', 
+    'patchouli': 'rgba(94, 78, 65, 0.1)', 
+    'leather': 'rgba(66, 51, 41, 0.1)',
+    'amber': 'rgba(194, 129, 58, 0.1)', 
+    'vanilla': 'rgba(219, 204, 166, 0.1)', 
+    'warm spicy': 'rgba(179, 93, 57, 0.1)', 
+    'sweet': 'rgba(207, 169, 185, 0.1)',
+    'musk': 'rgba(179, 168, 163, 0.1)', 
+    'powdery': 'rgba(212, 199, 208, 0.1)'
+  };
+  
+  let colors = [];
+  accords.forEach(a => {
+    const lower = a.toLowerCase();
+    for (const [key, val] of Object.entries(colorMap)) {
+      if (lower.includes(key) && !colors.includes(val) && colors.length < 3) {
+        colors.push(val);
+      }
+    }
+  });
+  
+  if (colors.length === 0) colors.push('rgba(30, 30, 35, 0.15)');
+  if (colors.length === 1) colors.push('rgba(20, 20, 25, 0.15)');
+  
+  return `linear-gradient(135deg, ${colors[0]}, ${colors[1] || colors[0]})`;
+}
+
 // --- Create 3D CSS3DObject Card Elements ---
 function createPerfumeCards() {
   fragrances.forEach((perfume) => {
@@ -349,6 +342,9 @@ function createPerfumeCards() {
     const element = document.createElement('div');
     element.className = `perfume-card ${perfume.scentFamily}`;
     element.setAttribute('data-id', perfume.id);
+    
+    // Apply Dynamic Gradient
+    element.style.background = getAccordGradient(perfume.accords);
     
     // Image container
     const imgContainer = document.createElement('div');
@@ -435,7 +431,9 @@ function createPerfumeCards() {
 // A. Fibonacci Lattice Sphere Layout (Expanded Radius = 1200)
 function calculateSphereLayout() {
   const N = fragrances.length;
-  const radius = 1200; // Expanded radius to create distance
+  // Dynamic radius for responsive mobile sizing
+  const isMobile = window.innerWidth <= 768;
+  const radius = isMobile ? 800 : 1200; 
   const phi = Math.PI * (3 - Math.sqrt(5)); 
   
   for (let i = 0; i < N; i++) {
@@ -451,9 +449,8 @@ function calculateSphereLayout() {
     
     const tempObj = new THREE.Object3D();
     tempObj.position.copy(position);
-    // In CSS3D, the front face is +Z. lookAt makes -Z point to the target.
-    // To make the front face point to the origin, we make -Z point AWAY from the origin.
-    tempObj.lookAt(position.clone().multiplyScalar(2));
+    // Point the front face (+Z) towards the origin so it's not mirrored from the inside
+    tempObj.lookAt(0, 0, 0);
     
     sphereTargets.push({
       position: position,
@@ -465,9 +462,15 @@ function calculateSphereLayout() {
 // B. Clean Flat Grid Wall Layout
 function calculateGridLayout() {
   const N = fragrances.length;
-  const cols = 10;
-  const spacingX = 260; // Clean, straight layout spacing
-  const spacingY = 320; 
+  const isMobile = window.innerWidth <= 768;
+  const isTablet = window.innerWidth <= 1024 && !isMobile;
+  
+  let cols = 10;
+  if (isTablet) cols = 6;
+  if (isMobile) cols = 4;
+  
+  const spacingX = isMobile ? 180 : 260; // Tighter on mobile
+  const spacingY = isMobile ? 260 : 320; 
   
   for (let i = 0; i < N; i++) {
     const col = i % cols;
@@ -552,7 +555,12 @@ function transformLayout(targetLayoutName, duration = 1200) {
   let targetControlsTarget = { x: 0, y: 0, z: 0 };
   
   if (targetLayoutName === 'grid') {
-    targetCamPos = { x: 0, y: 0, z: 1800 }; // Zoomed back to frame wide grid
+    const aspect = window.innerWidth / window.innerHeight;
+    let gridZ = 1800;
+    if (aspect < 1.0) {
+      gridZ = 1800 / Math.max(aspect, 0.5); // Push camera back on portrait, max distance 3600
+    }
+    targetCamPos = { x: 0, y: 0, z: gridZ }; // Zoomed back to frame wide grid
   }
   
   new TWEEN.Tween(camera.position)
@@ -588,6 +596,7 @@ function resetQuizState() {
   document.getElementById('panel-reveal').classList.remove('active');
   document.getElementById('btn-global-reset').style.display = 'none';
   document.getElementById('btn-open-consultation').style.display = 'block';
+  document.querySelector('.explore-search-container').style.display = 'block';
   
   restoreCameraAfterInspection();
 }
@@ -635,8 +644,11 @@ function calculateCompatibility() {
     if (searchInputStr) {
        const match = perfume.name.toLowerCase().includes(searchInputStr) || 
                      perfume.brand.toLowerCase().includes(searchInputStr) || 
-                     perfume.family.toLowerCase().includes(searchInputStr) ||
-                     perfume.notes.some(n => n.toLowerCase().includes(searchInputStr));
+                     perfume.scentFamily.toLowerCase().includes(searchInputStr) ||
+                     perfume.topNotes.some(n => n.toLowerCase().includes(searchInputStr)) ||
+                     perfume.middleNotes.some(n => n.toLowerCase().includes(searchInputStr)) ||
+                     perfume.baseNotes.some(n => n.toLowerCase().includes(searchInputStr)) ||
+                     perfume.accords.some(n => n.toLowerCase().includes(searchInputStr));
        if (!match) {
          score = 0; // Exclude entirely if it doesn't match the search
        }
@@ -682,13 +694,15 @@ function updateCardVisuals3D() {
           const rank = top5Ids.indexOf(perfume.id);
           const angle = (rank - 2) * 0.35; // Horizontally spaced arc
           
-          const offsetX = window.innerWidth > 768 ? -250 : 0; // Camera shift
-          const targetZ = 200 - (Math.cos(angle) * 60); // Push back to z=200 so they aren't massive/overlapping
+          const aspect = window.innerWidth / window.innerHeight;
+          let consultZ = 950;
+          if (aspect < 1.0) { consultZ = 950 / Math.max(aspect, 0.45); }
           
-          // Perspective correct center: 
-          // The sphere is at x=0, z=0. The camera is at x=offsetX, z=950.
-          // To keep the cards visually centered over the sphere, we must scale the X offset by depth.
-          const depthRatio = (950 - targetZ) / 950;
+          const offsetX = window.innerWidth > 1024 ? -250 : 0; // Camera shift only on desktop
+          const targetZ = 200 - (Math.cos(angle) * 60);
+          
+          // Perspective correct center:
+          const depthRatio = (consultZ - targetZ) / consultZ;
           const visualCenterX = offsetX + Math.abs(offsetX) * depthRatio;
           
           // Keep physical spread at 450 so cards fan out elegantly with slight overlap
@@ -1214,8 +1228,11 @@ function bindUIEvents() {
       const match = !q || 
                     perfume.name.toLowerCase().includes(q) || 
                     perfume.brand.toLowerCase().includes(q) || 
-                    perfume.family.toLowerCase().includes(q) ||
-                    perfume.notes.some(n => n.toLowerCase().includes(q));
+                    perfume.scentFamily.toLowerCase().includes(q) ||
+                    perfume.topNotes.some(n => n.toLowerCase().includes(q)) ||
+                    perfume.middleNotes.some(n => n.toLowerCase().includes(q)) ||
+                    perfume.baseNotes.some(n => n.toLowerCase().includes(q)) ||
+                    perfume.accords.some(n => n.toLowerCase().includes(q));
       
       if (match) {
         object.element.classList.remove('faded');
@@ -1243,11 +1260,15 @@ function bindUIEvents() {
     preInspectCameraState.position.copy(camera.position);
     preInspectCameraState.target.copy(controls.target);
     
-    // Animate camera to accommodate the left sidebar
+    // Animate camera to accommodate the left sidebar (on desktop) or bottom drawer (on tablet)
     controls.enabled = false;
-    const offsetX = window.innerWidth > 768 ? -250 : 0; // Shift camera left, scene moves right
+    const aspect = window.innerWidth / window.innerHeight;
+    let consultZ = 950;
+    if (aspect < 1.0) { consultZ = 950 / Math.max(aspect, 0.45); }
+    
+    const offsetX = window.innerWidth > 1024 ? -250 : 0; // Shift camera left only on desktop
     new TWEEN.Tween(camera.position)
-      .to({ x: offsetX, y: 0, z: 950 }, 1000)
+      .to({ x: offsetX, y: 0, z: consultZ }, 1000)
       .easing(TWEEN.Easing.Cubic.Out)
       .start();
     new TWEEN.Tween(controls.target)
@@ -1375,10 +1396,113 @@ function bindUIEvents() {
   });
   
   // Checkout CTA
-  document.querySelector('.btn-checkout').addEventListener('click', () => {
-    alert("Vanity signature acquired! Commencing packaging ritual with hand-melted gold wax sealing...");
-    cart = [];
-    updateCartUI();
-    document.getElementById('cart-drawer').classList.remove('active');
+  const checkoutBtn = document.querySelector('.btn-checkout');
+  if (checkoutBtn) {
+    checkoutBtn.addEventListener('click', () => {
+      alert("Vanity signature acquired! Commencing packaging ritual with hand-melted gold wax sealing...");
+      cart = [];
+      updateCartUI();
+      document.getElementById('cart-drawer').classList.remove('active');
+    });
+  }
+
+  // Add Swipe-To-Dismiss for mobile bottom drawers
+  addSwipeToDismiss('product-drawer', () => document.getElementById('product-drawer').classList.remove('active'));
+  addSwipeToDismiss('cart-drawer', () => document.getElementById('cart-drawer').classList.remove('active'));
+  
+  // Quiz overlay card is the swipeable element
+  const quizCard = document.querySelector('#panel-quiz .overlay-card');
+  if (quizCard) {
+    quizCard.id = 'quiz-overlay-card-swipeable';
+    addSwipeToDismiss('quiz-overlay-card-swipeable', () => {
+      document.getElementById('btn-close-quiz').click(); // Properly triggers full cleanup
+    });
+  }
+}
+
+// --- Mobile Touch Gestures ---
+function addSwipeToDismiss(elementId, closeAction) {
+  const el = document.getElementById(elementId);
+  if (!el) return;
+  
+  let startY = 0;
+  let currentY = 0;
+  let isDragging = false;
+  
+  el.addEventListener('touchstart', (e) => {
+    if (window.innerWidth > 1024) return;
+    
+    // Prevent swipe-to-dismiss if the user is scrolling inside a scrollable body
+    const scrollable = el.querySelector('.drawer-body');
+    if (scrollable && scrollable.scrollTop > 5) return;
+    
+    startY = e.touches[0].clientY;
+    currentY = startY; // FIX: Reset currentY on new touch!
+    isDragging = true;
+    el.style.transition = 'none';
+  }, { passive: true });
+  
+  el.addEventListener('touchmove', (e) => {
+    if (!isDragging) return;
+    currentY = e.touches[0].clientY;
+    const deltaY = currentY - startY;
+    if (deltaY > 0) { // Only swipe down
+      el.style.transform = `translateY(${deltaY}px)`;
+    }
+  }, { passive: true });
+  
+  el.addEventListener('touchend', () => {
+    if (!isDragging) return;
+    isDragging = false;
+    el.style.transition = ''; // restore CSS transitions
+    
+    const deltaY = currentY - startY;
+    el.style.transform = ''; // Clear inline transform
+    
+    if (deltaY > 120) {
+      closeAction();
+    }
   });
+}
+
+// --- Weather Background System ---
+function applyWeatherBackground() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(async (position) => {
+      try {
+        const lat = position.coords.latitude;
+        const lon = position.coords.longitude;
+        const res = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=weather_code,is_day`);
+        const data = await res.json();
+        
+        if (data && data.current) {
+          const code = data.current.weather_code;
+          const isDay = data.current.is_day;
+          
+          let gradient = 'linear-gradient(135deg, #0a0a0f, #1a1a24)'; // default dark
+          
+          // Basic WMO Weather logic mapped to gradients
+          if (code === 0 || code === 1) { // Clear
+             gradient = isDay ? 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)' : 'linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)';
+          } else if (code === 2 || code === 3) { // Cloudy
+             gradient = isDay ? 'linear-gradient(135deg, #8e9eab 0%, #eef2f3 100%)' : 'linear-gradient(135deg, #141e30 0%, #243b55 100%)';
+          } else if (code >= 45 && code <= 48) { // Fog
+             gradient = 'linear-gradient(135deg, #757f9a 0%, #d7dde8 100%)';
+          } else if (code >= 51 && code <= 67) { // Rain
+             gradient = 'linear-gradient(135deg, #2b5876 0%, #4e4376 100%)';
+          } else if (code >= 71 && code <= 77) { // Snow
+             gradient = 'linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%)';
+          } else if (code >= 95) { // Thunderstorm
+             gradient = 'linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%)';
+          }
+          
+          document.body.style.background = gradient;
+        }
+      } catch (err) {
+        console.error("Failed to fetch weather for background:", err);
+      }
+    }, (err) => {
+      console.warn("Geolocation denied or failed, using default background.");
+    });
+  }
 }
