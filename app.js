@@ -278,17 +278,26 @@ function onWindowResize() {
   }, 250);
 }
 
-function animateLoop() {
+let lastFrameTime = 0;
+const isTouchDevice = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
+const targetFPS = isTouchDevice ? 30 : 60;
+const frameInterval = 1000 / targetFPS;
+
+function animateLoop(timestamp) {
   requestAnimationFrame(animateLoop);
+  
+  // Throttle frame rate on mobile/tablet
+  if (timestamp - lastFrameTime < frameInterval) return;
+  lastFrameTime = timestamp;
   
   TWEEN.update();
   controls.update();
   
-  // Continuous slow rotation in Sphere mode to reveal 3D space organically
-  if (activeLayout === 'sphere' && !isInspectMode) {
+  // Continuous slow rotation in Sphere mode — DESKTOP ONLY
+  if (!isTouchDevice && activeLayout === 'sphere' && !isInspectMode) {
     scene.rotation.y += 0.0006;
     scene.rotation.x += 0.0002;
-  } else {
+  } else if (!isTouchDevice) {
     // Return scene rotation to neutral slowly when not in sphere
     scene.rotation.y += (0 - scene.rotation.y) * 0.05;
     scene.rotation.x += (0 - scene.rotation.x) * 0.05;
@@ -433,7 +442,10 @@ function calculateSphereLayout() {
   const N = fragrances.length;
   // Dynamic radius for responsive mobile sizing
   const isMobile = window.innerWidth <= 768;
-  const radius = isMobile ? 800 : 1200; 
+  const isTablet = window.innerWidth <= 1024 && !isMobile;
+  let radius = 1200;
+  if (isTablet) radius = 900;
+  if (isMobile) radius = 550;
   const phi = Math.PI * (3 - Math.sqrt(5)); 
   
   for (let i = 0; i < N; i++) {
@@ -1410,11 +1422,10 @@ function bindUIEvents() {
   addSwipeToDismiss('product-drawer', () => document.getElementById('product-drawer').classList.remove('active'));
   addSwipeToDismiss('cart-drawer', () => document.getElementById('cart-drawer').classList.remove('active'));
   
-  // Quiz overlay card is the swipeable element
-  const quizCard = document.querySelector('#panel-quiz .overlay-card');
-  if (quizCard) {
-    quizCard.id = 'quiz-overlay-card-swipeable';
-    addSwipeToDismiss('quiz-overlay-card-swipeable', () => {
+  // Quiz: on mobile, swipe the parent sidebar-wizard panel, not the inner card
+  const quizPanel = document.getElementById('panel-quiz');
+  if (quizPanel) {
+    addSwipeToDismiss('panel-quiz', () => {
       document.getElementById('btn-close-quiz').click(); // Properly triggers full cleanup
     });
   }
@@ -1481,17 +1492,21 @@ function applyWeatherBackground() {
           
           let gradient = 'linear-gradient(135deg, #0a0a0f, #1a1a24)'; // default dark
           
-          // Basic WMO Weather logic mapped to gradients
+          // WMO Weather codes → dark luxury-appropriate gradients
           if (code === 0 || code === 1) { // Clear
-             gradient = isDay ? 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)' : 'linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)';
+             gradient = isDay 
+               ? 'linear-gradient(135deg, #0a1628 0%, #0d2137 50%, #122a45 100%)' 
+               : 'linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)';
           } else if (code === 2 || code === 3) { // Cloudy
-             gradient = isDay ? 'linear-gradient(135deg, #8e9eab 0%, #eef2f3 100%)' : 'linear-gradient(135deg, #141e30 0%, #243b55 100%)';
+             gradient = isDay 
+               ? 'linear-gradient(135deg, #1a1e2e 0%, #2a2f42 100%)' 
+               : 'linear-gradient(135deg, #141e30 0%, #243b55 100%)';
           } else if (code >= 45 && code <= 48) { // Fog
-             gradient = 'linear-gradient(135deg, #757f9a 0%, #d7dde8 100%)';
+             gradient = 'linear-gradient(135deg, #1c1f2e 0%, #2d3040 100%)';
           } else if (code >= 51 && code <= 67) { // Rain
-             gradient = 'linear-gradient(135deg, #2b5876 0%, #4e4376 100%)';
+             gradient = 'linear-gradient(135deg, #1a2a3a 0%, #1e2340 100%)';
           } else if (code >= 71 && code <= 77) { // Snow
-             gradient = 'linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%)';
+             gradient = 'linear-gradient(135deg, #1a1e2e 0%, #2a3040 100%)';
           } else if (code >= 95) { // Thunderstorm
              gradient = 'linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%)';
           }
